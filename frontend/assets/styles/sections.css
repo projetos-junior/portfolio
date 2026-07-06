@@ -166,17 +166,32 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: rgba(31, 32, 55, 0.82);
+  align-content: start;
 }
 
 .about__panel img {
-  width: min(18rem, 100%);
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 1.18;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 1.6rem;
 }
 
 .about__panel dl {
   display: grid;
-  gap: var(--space-4);
+  gap: 0;
   margin: 0;
+}
+
+.about__panel dl > div {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(198, 203, 218, 0.12);
+}
+
+.about__panel dl > div:first-child {
+  padding-top: 0.35rem;
+  border-top: 0;
 }
 
 .about__panel dt {
@@ -184,12 +199,13 @@
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
 }
 
 .about__panel dd {
   margin: 0;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .specialties__grid {
