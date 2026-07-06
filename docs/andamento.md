@@ -70,6 +70,7 @@
 | Usar o style guide como base oficial da paleta e tipografia | Garantir consistência visual | Acelera design e implementação |
 | Priorizar one-page no MVP | Reduz escopo e acelera entrega | Facilita primeira publicação |
 | Usar foto profissional no hero | Reforça confiança e memorabilidade | Melhora presença pessoal |
+| Usar HTML5 semântico, CSS3 moderno e JavaScript ES6+ no frontend | Manter stack simples, portátil e fácil de evoluir | Reduz complexidade inicial |
 
 ---
 

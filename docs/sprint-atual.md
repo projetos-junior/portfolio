@@ -109,3 +109,4 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 | MVP será uma one-page responsiva | Melhor equilíbrio entre escopo e valor | 2026-07-06 |
 | A paleta seguirá o style guide fornecido | Coerência visual e rapidez de execução | 2026-07-06 |
 | `foto2.png` será a referência preferencial para o hero | Melhor enquadramento para composição principal | 2026-07-06 |
+| Frontend inicial usará HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Simplificar a implementação inicial sem perder qualidade | 2026-07-06 |

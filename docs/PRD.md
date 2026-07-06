@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.0 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.1 | **Status:** Planejamento inicial concluído
 
 ---
 
@@ -12,6 +12,7 @@
 | Versão | Data | Autor | Alterações |
 |--------|------|-------|------------|
 | 1.0 | 2026-07-06 | Codex + VERA | PRD inicial do portfólio pessoal de QA |
+| 1.1 | 2026-07-06 | Codex + VERA | Ajuste da stack do frontend para HTML5, CSS3 e JavaScript ES6+ |
 
 ---
 
@@ -197,10 +198,10 @@ Futuro
 ### 10.1 Stack Definida
 
 - **Arquitetura:** monólito modular frontend-first, com seções isoladas em componentes reaproveitáveis
-- **Frontend:** Next.js + TypeScript
-- **Estilo:** CSS modular com tokens de design system ou Tailwind configurado a partir dos tokens
+- **Frontend:** HTML5 semântico, CSS3 moderno e JavaScript moderno (ECMAScript ES6+)
+- **Estilo:** CSS organizado por camadas e componentes, orientado por tokens do design system
 - **Banco de dados:** não aplicável no MVP
-- **Infraestrutura:** deploy estático ou híbrido em Vercel/Netlify
+- **Infraestrutura:** deploy estático em Vercel, Netlify ou similar
 - **Autenticação:** não aplicável
 
 ### 10.2 Requisitos Não-Funcionais
@@ -269,3 +270,4 @@ Futuro
 | 2026-07-06 | Estrutura inicial será one-page com expansão futura para case detail | Reduz escopo e acelera entrega | VERA |
 | 2026-07-06 | Identidade visual seguirá a base escura com verde menta do style guide | Alinha referências fornecidas e transmite modernidade | LUMI |
 | 2026-07-06 | O portfólio destacará QA como diferencial estratégico, não só lista de ferramentas | Melhor posicionamento profissional | VERA |
+| 2026-07-06 | O MVP do frontend será implementado com HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Manter simplicidade, controle e baixo acoplamento tecnológico | VERA |
