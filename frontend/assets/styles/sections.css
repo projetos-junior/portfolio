@@ -155,7 +155,7 @@
   line-height: 1.4;
 }
 
-.about__grid,
+.about__body,
 .toolkit__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(22rem, 30rem);
@@ -182,14 +182,14 @@
 }
 
 .about__heading {
-  max-width: 36rem;
-  margin-bottom: 0;
+  max-width: 48rem;
+  margin-bottom: var(--space-6);
 }
 
 .about__heading h2 {
   font-size: clamp(2.5rem, 4.8vw, 3.95rem);
   line-height: 1.04;
-  max-width: 11ch;
+  max-width: 12ch;
 }
 
 .about__story {
@@ -371,7 +371,7 @@
 
 @media (max-width: 1024px) {
   .hero,
-  .about__grid,
+  .about__body,
   .toolkit__grid,
   .specialties__grid {
     grid-template-columns: 1fr;
