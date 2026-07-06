@@ -30,6 +30,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 - [x] PRD inicial preenchido com escopo, MVP e priorização.
 - [x] Design system inicial preenchido com paleta, tipografia e componentes.
 - [x] Estrutura de seções e wireframe textual definidos.
+- [x] Conteúdo base do currículo incorporado ao planejamento.
 - [ ] Conteúdo real de projetos e contatos consolidado.
 - [ ] Implementação da home iniciada.
 
@@ -48,7 +49,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 | ID | Título | Camada | Agente | Progresso |
 |----|--------|--------|--------|-----------|
-| T03 | Preparar implementação da landing page | Frontend | FORGE | 20% |
+| T03 | Preparar implementação da landing page | Frontend | FORGE | 35% |
 
 ### 📋 Planejadas
 
@@ -99,6 +100,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 - Definição dos links reais de contato
 - Confirmação dos projetos/cases que entrarão no MVP
+- Validação de métricas ou resultados que possam ser publicados
 
 ---
 
@@ -110,3 +112,4 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 | A paleta seguirá o style guide fornecido | Coerência visual e rapidez de execução | 2026-07-06 |
 | `foto2.png` será a referência preferencial para o hero | Melhor enquadramento para composição principal | 2026-07-06 |
 | Frontend inicial usará HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Simplificar a implementação inicial sem perder qualidade | 2026-07-06 |
+| O currículo anexado será a fonte inicial de conteúdo validado | Melhorar consistência entre apresentação e trajetória real | 2026-07-06 |

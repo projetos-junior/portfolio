@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.1 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.2 | **Status:** Planejamento inicial concluído
 
 ---
 
@@ -13,14 +13,15 @@
 |--------|------|-------|------------|
 | 1.0 | 2026-07-06 | Codex + VERA | PRD inicial do portfólio pessoal de QA |
 | 1.1 | 2026-07-06 | Codex + VERA | Ajuste da stack do frontend para HTML5, CSS3 e JavaScript ES6+ |
+| 1.2 | 2026-07-06 | Codex + VERA | Incorporação do currículo como base factual do conteúdo |
 
 ---
 
 ## 1. Resumo do Produto
 
-O produto será um portfólio pessoal de página única, com possibilidade de expansão para páginas internas de estudos de caso. O objetivo é apresentar o perfil profissional do proprietário como Analista de Testes e QA, destacando experiência, competências, abordagem de qualidade, ferramentas utilizadas e projetos relevantes.
+O produto será um portfólio pessoal de página única, com possibilidade de expansão para páginas internas de estudos de caso. O objetivo é apresentar o perfil profissional de Edson José Gabriel Junior como Analista de Qualidade de Software, destacando experiência, competências, abordagem de qualidade, ferramentas utilizadas e projetos relevantes.
 
-O portfólio deve comunicar confiança, clareza técnica e maturidade profissional. Em vez de parecer um currículo estático, ele deve funcionar como uma vitrine estratégica: demonstrar capacidade analítica, visão de processo, atenção a detalhes, domínio de testes manuais e automatizados, e foco em qualidade como acelerador de negócio.
+O portfólio deve comunicar confiança, clareza técnica e maturidade profissional. Em vez de parecer um currículo estático, ele deve funcionar como uma vitrine estratégica: demonstrar capacidade analítica, visão de processo, atenção a detalhes, domínio de testes manuais, testes de API, rastreabilidade em Jira/Xray e atuação em produtos com URA, bots e bots com IA, com foco em qualidade como acelerador de negócio.
 
 ---
 
@@ -78,6 +79,7 @@ Um portfólio pessoal de QA que transforma experiência em qualidade de software
 - Linguagem profissional com leitura rápida para recrutadores e profundidade suficiente para líderes técnicos.
 - Design visual forte, mas funcional, alinhado ao style guide fornecido.
 - Uso da foto profissional para elevar confiança e presença pessoal.
+- Experiência recente e prática em testes ponta a ponta, APIs, rastreabilidade e monitoramento operacional.
 
 ### 4.3 Benefícios-Chave
 - Aumentar credibilidade profissional.
@@ -107,6 +109,13 @@ Não entram no MVP blog, CMS, área administrativa, autenticação, dashboard, f
 | F07 | Responsividade e acessibilidade base | Layout funcional em mobile e desktop com contraste, foco visível e sem dependência de hover | Must-have |
 | F08 | Navegação por âncoras | Menu leva rapidamente às seções principais sem confundir o visitante | Should-have |
 | F09 | Download de currículo | Botão para baixar currículo PDF caso o arquivo seja disponibilizado | Should-have |
+
+### 5.3 Base factual já confirmada pelo currículo
+- Cargo atual: Analista de Teste Júnior (QA) na Intervalor/GRB (Mutant), desde abril de 2024.
+- Experiência anterior em sustentação de bots e service desk, útil para reforçar visão operacional e investigação de falhas.
+- Ferramentas já confirmadas: Jira/Xray, Postman, Grafana, Kibana, HeidiSQL, VS Code, Excel/Word, ChatGPT e Gemini.
+- Contextos já confirmados: testes exploratórios, funcionais, não funcionais, smoke, regressão, integração, APIs, URA, bots de voz/texto e bots com IA.
+- Formação confirmada: Tecnólogo em Sistemas para Internet, concluído na Universidade Anhembi Morumbi.
 
 ---
 
@@ -157,6 +166,7 @@ Não entram no MVP blog, CMS, área administrativa, autenticação, dashboard, f
 | RN04 | A foto principal deve transmitir proximidade e profissionalismo, sem comprometer leitura do layout | Reforça confiança |
 | RN05 | O site deve funcionar bem em mobile antes de otimizações desktop | Garante prioridade mobile-first |
 | RN06 | O layout deve seguir o style guide fornecido como base, adaptado ao contexto de QA | Mantém identidade visual consistente |
+| RN07 | Informações extraídas do currículo devem ser priorizadas como fonte oficial até revisão manual do usuário | Evita inconsistência entre currículo e portfólio |
 
 ---
 
@@ -239,9 +249,11 @@ Futuro
 
 ### F03 — Especialidades QA
 - [ ] Dado o acesso à seção, quando o visitante visualizar os cards, então deve reconhecer rapidamente as principais frentes de atuação em QA.
+- [ ] Dado o conteúdo confirmado do currículo, quando a seção for exibida, então deve contemplar ao menos testes manuais, APIs, rastreabilidade e atuação em bots/URA.
 
 ### F04 — Projetos/cases
 - [ ] Dado o acesso aos projetos, quando o visitante abrir ou ler cada item, então deve entender contexto, contribuição e impacto.
+- [ ] Dado o currículo atual, quando os primeiros cases forem montados, então eles devem partir de experiências reais na Intervalor/GRB (Mutant) e contextos compatíveis com o histórico profissional.
 
 ### F06 — Contato
 - [ ] Dado o interesse do visitante, quando ele acionar um CTA, então deve conseguir iniciar contato sem fluxo intermediário confuso.
@@ -256,7 +268,7 @@ Futuro
 
 | ID | Risco / Hipótese | Probabilidade | Impacto | Mitigação | Status |
 |----|-----------------|---------------|---------|-----------|--------|
-| R01 | Falta de conteúdo concreto para os projetos/cases enfraquecer a narrativa | Média | Alto | Estruturar cases curtos com problema, ação e resultado | Aberto |
+| R01 | Falta de conteúdo concreto para os projetos/cases enfraquecer a narrativa | Média | Alto | Estruturar cases curtos com problema, ação e resultado a partir das experiências já confirmadas no currículo | Aberto |
 | R02 | Excesso de inspiração de portfólios de designers desalinhar com posicionamento de QA | Média | Médio | Adaptar a estética sem copiar estrutura literal | Aberto |
 | H01 | Uma página única bem estruturada será suficiente para conversão inicial | Alta | Médio | Validar com uso em processos seletivos | Aberto |
 | H02 | O uso da foto profissional aumentará percepção de confiança e memorabilidade | Alta | Médio | Testar em feedback informal com recrutadores/colegas | Aberto |
@@ -271,3 +283,4 @@ Futuro
 | 2026-07-06 | Identidade visual seguirá a base escura com verde menta do style guide | Alinha referências fornecidas e transmite modernidade | LUMI |
 | 2026-07-06 | O portfólio destacará QA como diferencial estratégico, não só lista de ferramentas | Melhor posicionamento profissional | VERA |
 | 2026-07-06 | O MVP do frontend será implementado com HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Manter simplicidade, controle e baixo acoplamento tecnológico | VERA |
+| 2026-07-06 | O currículo enviado passa a ser a base factual inicial do conteúdo do portfólio | Reduz suposições e aumenta consistência | VERA |

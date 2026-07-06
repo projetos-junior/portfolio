@@ -12,7 +12,7 @@
 |-------|-------|
 | **Fase atual** | Planejamento |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 20% |
+| **Progresso geral** | 28% |
 | **Última atualização** | 2026-07-06 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -41,13 +41,13 @@
 
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
-| B01 | Faltam textos finais reais para projetos, métricas e contatos | Médio | Usuário | Aberto |
+| B01 | Ainda faltam métricas, links finais e recortes de cases para enriquecer o conteúdo | Médio | Usuário | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Consolidar conteúdo real de bio, experiências, ferramentas e canais de contato.
+1. Consolidar headline, bio final, métricas e links reais de contato com base no currículo.
 2. Implementar a home responsiva com base em `docs/PRD.md` e `docs/DESIGN.md`.
 3. Validar acessibilidade, performance e consistência visual.
 4. Refinar cases e decidir se haverá página interna por projeto.
@@ -71,6 +71,7 @@
 | Priorizar one-page no MVP | Reduz escopo e acelera entrega | Facilita primeira publicação |
 | Usar foto profissional no hero | Reforça confiança e memorabilidade | Melhora presença pessoal |
 | Usar HTML5 semântico, CSS3 moderno e JavaScript ES6+ no frontend | Manter stack simples, portátil e fácil de evoluir | Reduz complexidade inicial |
+| Usar o currículo enviado como fonte factual inicial do conteúdo | Aumentar aderência do portfólio à trajetória real | Reduz suposições no planejamento |
 
 ---
 
