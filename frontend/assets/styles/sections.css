@@ -8,6 +8,7 @@
 
 .hero__copy,
 .hero__visual,
+.about__content,
 .about__story,
 .about__panel,
 .contact__intro {
@@ -157,7 +158,7 @@
 .about__grid,
 .toolkit__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 30rem);
   gap: var(--space-6);
   align-items: start;
 }
@@ -175,27 +176,28 @@
   pointer-events: none;
 }
 
+.about__content {
+  gap: var(--space-5);
+  max-width: 42rem;
+}
+
 .about__heading {
-  grid-column: 1;
-  grid-row: 1;
-  max-width: 38rem;
+  max-width: 36rem;
   margin-bottom: 0;
 }
 
 .about__heading h2 {
-  font-size: clamp(2.25rem, 5.8vw, 4.4rem);
-  max-width: 12ch;
+  font-size: clamp(2.5rem, 4.8vw, 3.95rem);
+  line-height: 1.04;
+  max-width: 11ch;
 }
 
 .about__story {
-  grid-column: 1;
-  grid-row: 2;
-  max-width: 42rem;
+  max-width: 38rem;
+  gap: var(--space-4);
 }
 
 .about__highlights {
-  grid-column: 1;
-  grid-row: 3;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-4);
@@ -224,8 +226,6 @@
 }
 
 .about__panel {
-  grid-column: 2;
-  grid-row: 1 / span 3;
   padding: var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -395,16 +395,9 @@
   }
 
   .about__heading h2,
-  .about__story {
-    max-width: none;
-  }
-
-  .about__heading,
   .about__story,
-  .about__highlights,
-  .about__panel {
-    grid-column: auto;
-    grid-row: auto;
+  .about__content {
+    max-width: none;
   }
 
   .about__highlights {
