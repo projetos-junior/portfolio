@@ -16,6 +16,7 @@
 | 1.2 | 2026-07-06 | Codex + VERA | Incorporação do currículo como base factual do conteúdo |
 | 1.3 | 2026-07-06 | Codex + VERA | Criação da copy inicial da home e estrutura de contatos |
 | 1.4 | 2026-07-06 | Codex + VERA | Definição do e-mail final para contato no portfólio |
+| 1.5 | 2026-07-06 | Codex + VERA | Definição do CTA principal para abertura direta no WhatsApp |
 
 ---
 
@@ -344,6 +345,11 @@ Minha experiência recente inclui atuação em produtos com URA, bots de voz e t
 
 ### 15.8 CTA final
 Se você busca um profissional de QA com olhar analítico, atenção aos detalhes e foco em qualidade ponta a ponta, vamos conversar.
+
+### 15.8.1 CTA principal do hero
+- **Destino:** WhatsApp direto
+- **Link:** `https://wa.me/5511988020276`
+- **Objetivo:** reduzir atrito de contato logo na primeira dobra
 
 ### 15.9 Contatos para o portfólio
 - **LinkedIn:** `https://www.linkedin.com/in/edyjunior/`
