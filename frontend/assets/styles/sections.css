@@ -60,6 +60,8 @@
 
 .hero__visual {
   position: relative;
+  display: grid;
+  gap: var(--space-4);
   justify-items: end;
 }
 
@@ -102,11 +104,9 @@
 }
 
 .floating-note {
-  position: absolute;
-  z-index: 3;
   display: grid;
   gap: var(--space-1);
-  max-width: 15rem;
+  max-width: 16rem;
   padding: 0.85rem 1rem;
   border: 1px solid var(--border);
   border-radius: 1.25rem;
@@ -118,14 +118,11 @@
   font-size: 0.95rem;
 }
 
-.floating-note--top {
-  top: 1.5rem;
-  left: 1.25rem;
-}
-
-.floating-note--bottom {
-  right: 8%;
-  bottom: 10%;
+.hero__notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  width: min(32rem, 100%);
 }
 
 .proof-strip {
@@ -296,9 +293,8 @@
     justify-items: stretch;
   }
 
-  .floating-note--top,
-  .floating-note--bottom {
-    position: static;
+  .hero__notes {
+    grid-template-columns: 1fr;
   }
 
   .proof-strip {
