@@ -103,6 +103,7 @@
 
 .floating-note {
   position: absolute;
+  z-index: 3;
   display: grid;
   gap: var(--space-1);
   max-width: 15rem;
@@ -118,8 +119,8 @@
 }
 
 .floating-note--top {
-  top: 12%;
-  left: -8%;
+  top: 1.5rem;
+  left: 1.25rem;
 }
 
 .floating-note--bottom {
