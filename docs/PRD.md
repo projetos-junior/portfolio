@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.2 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.3 | **Status:** Planejamento inicial concluído
 
 ---
 
@@ -14,6 +14,7 @@
 | 1.0 | 2026-07-06 | Codex + VERA | PRD inicial do portfólio pessoal de QA |
 | 1.1 | 2026-07-06 | Codex + VERA | Ajuste da stack do frontend para HTML5, CSS3 e JavaScript ES6+ |
 | 1.2 | 2026-07-06 | Codex + VERA | Incorporação do currículo como base factual do conteúdo |
+| 1.3 | 2026-07-06 | Codex + VERA | Criação da copy inicial da home e estrutura de contatos |
 
 ---
 
@@ -284,3 +285,72 @@ Futuro
 | 2026-07-06 | O portfólio destacará QA como diferencial estratégico, não só lista de ferramentas | Melhor posicionamento profissional | VERA |
 | 2026-07-06 | O MVP do frontend será implementado com HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Manter simplicidade, controle e baixo acoplamento tecnológico | VERA |
 | 2026-07-06 | O currículo enviado passa a ser a base factual inicial do conteúdo do portfólio | Reduz suposições e aumenta consistência | VERA |
+
+---
+
+## 15. Copy Inicial da Home
+
+### 15.1 Headline principal
+**Opção recomendada**
+Analista de Qualidade de Software com foco em testes ponta a ponta, APIs e rastreabilidade em produtos digitais.
+
+**Opção alternativa**
+QA Analyst com atuação em testes manuais, APIs, bots e qualidade operacional orientada a resultados.
+
+### 15.2 Subheadline
+Ajudo times a entregar software com mais confiança por meio de testes bem planejados, investigação de falhas, evidências consistentes e colaboração contínua com produto e desenvolvimento.
+
+### 15.3 Resumo profissional para a seção "Sobre"
+Sou Edson José Gabriel Junior, Analista de Qualidade de Software com experiência em planejamento, modelagem e execução de testes manuais, exploratórios, funcionais e não funcionais. Atuo também com smoke, regressão, integração e testes de API com Postman, sempre com foco em rastreabilidade, clareza de evidências e qualidade ponta a ponta.
+
+Minha experiência recente inclui atuação em produtos com URA, bots de voz e texto e bots com IA, além do uso de Jira/Xray para gestão de testes e acompanhamento de defeitos. Venho de uma base sólida em sustentação e service desk, o que amplia minha visão sobre operação, monitoramento, estabilidade e análise de falhas em ambientes reais.
+
+### 15.4 Como eu trabalho
+- Planejo e executo testes com foco em cobertura prática e risco do negócio.
+- Valido fluxos, integrações e APIs com atenção a evidências e rastreabilidade.
+- Colaboro com times ágeis em cerimônias, alinhamentos e melhoria contínua.
+- Apoio a identificação de falhas antes que elas gerem impacto maior em produção.
+
+### 15.5 Especialidades principais
+- **Testes funcionais e exploratórios:** validação de comportamento, cenários críticos e experiência de uso.
+- **Testes de API e integração:** apoio à validação de serviços e comunicação entre sistemas com Postman.
+- **Rastreabilidade e gestão de qualidade:** uso de Jira/Xray para evidências, organização e acompanhamento de defeitos.
+- **Qualidade em bots e URA:** atuação em produtos com voz, texto e IA, observando fluxo ponta a ponta.
+
+### 15.6 Mini-cases iniciais
+**Case 1 — Qualidade ponta a ponta em bots e URA**
+- **Contexto:** atuação em produtos com URA, bots de cobrança e bots com IA.
+- **Atuação:** planejamento e execução de testes exploratórios, funcionais, não funcionais, smoke, regressão e integração.
+- **Valor gerado:** apoio à qualidade de jornadas complexas, com mais previsibilidade nas validações e melhor acompanhamento de falhas.
+
+**Case 2 — Validação de APIs e integrações**
+- **Contexto:** necessidade de verificar integrações e consistência de respostas entre sistemas.
+- **Atuação:** testes de API com Postman e análise de integrações durante o fluxo de QA.
+- **Valor gerado:** maior segurança na validação técnica dos fluxos e mais confiança para o time nas entregas.
+
+**Case 3 — Rastreabilidade e organização de evidências**
+- **Contexto:** necessidade de controle claro sobre testes executados, defeitos e cobertura validada.
+- **Atuação:** uso de Jira/Xray para registrar testes, evidências e acompanhar defeitos.
+- **Valor gerado:** rastreabilidade mais clara para o time e melhor comunicação do status de qualidade.
+
+### 15.7 Ferramentas por contexto
+- **Gestão e rastreabilidade:** Jira, Xray
+- **Testes de API:** Postman
+- **Observabilidade e análise:** Grafana, Kibana
+- **Consulta e apoio técnico:** HeidiSQL, VS Code
+- **Produtividade e documentação:** Excel, Word
+- **Apoio com IA:** ChatGPT, Gemini
+
+### 15.8 CTA final
+Se você busca um profissional de QA com olhar analítico, atenção aos detalhes e foco em qualidade ponta a ponta, vamos conversar.
+
+### 15.9 Contatos para o portfólio
+- **LinkedIn:** `https://www.linkedin.com/in/edyjunior/`
+- **GitHub:** `https://github.com/projetos-junior`
+- **Telefone/WhatsApp:** `+55 11 98802-0276`
+- **E-mail:** `definir-email-final@pendente`
+
+### 15.10 Pendências de conteúdo
+- Confirmar o e-mail final que substituirá o do currículo.
+- Validar se o telefone será exibido publicamente ou apenas via WhatsApp.
+- Refinar os mini-cases com resultados mensuráveis, se puder publicar.

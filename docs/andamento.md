@@ -12,7 +12,7 @@
 |-------|-------|
 | **Fase atual** | Planejamento |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 28% |
+| **Progresso geral** | 38% |
 | **Última atualização** | 2026-07-06 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -34,6 +34,7 @@
 | ID | Descrição | Camada | Agente | Iniciado em |
 |----|-----------|--------|--------|-------------|
 | T03 | Preparação da etapa de implementação do frontend | Frontend | FORGE | 2026-07-06 |
+| T04 | Consolidação da copy inicial da home com base no currículo | Docs | VERA | 2026-07-06 |
 
 ---
 
@@ -41,16 +42,16 @@
 
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
-| B01 | Ainda faltam métricas, links finais e recortes de cases para enriquecer o conteúdo | Médio | Usuário | Aberto |
+| B01 | Ainda faltam o e-mail final, métricas publicáveis e eventual refinamento dos cases | Médio | Usuário | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Consolidar headline, bio final, métricas e links reais de contato com base no currículo.
+1. Confirmar o e-mail final e decidir se o telefone aparecerá como ligação, WhatsApp ou ambos.
 2. Implementar a home responsiva com base em `docs/PRD.md` e `docs/DESIGN.md`.
 3. Validar acessibilidade, performance e consistência visual.
-4. Refinar cases e decidir se haverá página interna por projeto.
+4. Refinar cases com resultados mensuráveis e decidir se haverá página interna por projeto.
 
 ---
 
@@ -72,6 +73,7 @@
 | Usar foto profissional no hero | Reforça confiança e memorabilidade | Melhora presença pessoal |
 | Usar HTML5 semântico, CSS3 moderno e JavaScript ES6+ no frontend | Manter stack simples, portátil e fácil de evoluir | Reduz complexidade inicial |
 | Usar o currículo enviado como fonte factual inicial do conteúdo | Aumentar aderência do portfólio à trajetória real | Reduz suposições no planejamento |
+| Criar a copy inicial da home antes da implementação | Acelerar frontend com narrativa já definida | Reduz retrabalho na montagem da interface |
 
 ---
 
