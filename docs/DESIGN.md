@@ -3,7 +3,7 @@
 > **Quem preenche:** LUMI (UX/UI) com suporte de CANVAS (canvas-design-system.md)
 > **Quando:** Antes de qualquer implementação de frontend
 > **Consumido por:** FORGE (implementação), VALE (validação)
-> **Versão:** 1.0 | **Status:** Direção visual definida
+> **Versão:** 1.1 | **Status:** Direção visual definida e primeira implementação iniciada
 
 ---
 
@@ -17,7 +17,12 @@
 | **Anti-padrões** | visual genérico de template, excesso de gradientes aleatórios, blocos muito coloridos, animações pesadas, linguagem visual de portfólio de designer sem adaptação para QA |
 
 ### Direção criativa
-O visual deve aproveitar a energia das referências com hero forte, foto em destaque e cards modulares, mas traduzido para uma narrativa de qualidade de software. A sensação geral precisa ser de confiança técnica: menos autopromoção genérica e mais clareza de processo, organização e precisão.
+O visual deve aproveitar a energia das referências com hero forte, foto em destaque e blocos modulares, mas traduzido para uma narrativa de qualidade de software. A sensação geral precisa ser de confiança técnica: menos autopromoção genérica e mais clareza de processo, organização e precisão.
+
+### Conceito escolhido
+**Precision Editorial**
+
+Um layout dark-first com presença editorial, recortes geométricos assimétricos, notas flutuantes de contexto e uma grade visual que lembra organização de fluxo e leitura de sinal. A diferenciação principal não está em efeitos chamativos, e sim em composição: hero com retrato em moldura autoral, faixa de provas rápidas, blocos de especialidade com pesos diferentes e cases em trilha vertical.
 
 ---
 
@@ -107,7 +112,9 @@ O visual deve aproveitar a energia das referências com hero forte, foto em dest
 ### Regras de composição
 - Alternar seções com variações sutis de superfície para manter ritmo visual.
 - Hero com composição assimétrica: texto à esquerda, foto em destaque à direita no desktop.
-- Cards com alturas próximas para evitar ruído visual.
+- Usar uma única moldura visual forte para a foto principal, evitando avatar solto em card genérico.
+- Inserir notas contextuais flutuantes em pontos estratégicos para reforçar repertório técnico.
+- Evitar grade homogênea; especialidades devem ter variação de altura/largura.
 
 ---
 
@@ -172,6 +179,17 @@ O visual deve aproveitar a energia das referências com hero forte, foto em dest
 ### Bloco de especialidade QA
 Cada card de especialidade deve combinar um ícone simples, um título curto e uma descrição de uma frase. Exemplos: testes funcionais, automação, API testing, regressão, qualidade de processo, documentação e evidência.
 
+### Moldura de retrato
+- Fundo em superfície escura com brilho verde sutil
+- Recorte assimétrico com raio mais aberto em um dos cantos
+- Halo circular ou linha técnica ao redor como detalhe de profundidade
+- Suportar notas flutuantes sobrepostas sem perder legibilidade
+
+### Faixa de prova rápida
+- Bloco horizontal com 3 mensagens curtas
+- Cada item deve misturar rótulo curto e evidência objetiva
+- Separação por linhas finas, sem virar grade de KPI genérica
+
 ### Card de projeto/case
 Cada item deve conter:
 - título do projeto ou contexto
@@ -179,6 +197,12 @@ Cada item deve conter:
 - atuação em QA
 - resultado ou ganho percebido
 - stack ou ferramentas usadas
+
+### Card de case implementado no MVP
+- Estrutura em trilha vertical com índice numérico
+- Destaque do título acima
+- Corpo enxuto com contexto e atuação
+- Lista curta de ganhos ou sinais de valor
 
 ---
 
@@ -260,20 +284,22 @@ Cada item deve conter:
 - parágrafo curto explicando como você ajuda times a entregar software com qualidade
 - dois CTAs: contato principal e ver projetos
 - foto profissional em destaque, preferencialmente `foto2.png` para o hero por enquadramento mais natural de meio corpo
+- moldura de retrato assimétrica com notas flutuantes "Atual" e "Foco"
 
 ### 2. Sobre
 - bloco em duas colunas no desktop
 - mini resumo profissional
 - diferenciais de trabalho: visão analítica, documentação, colaboração com dev e produto, prevenção de falhas
 - pequenos indicadores de confiança como anos de experiência, número de projetos ou frentes atendidas, se disponíveis
+- foto secundária `foto1.png` em painel lateral com blocos de contexto
 
 ### 3. Especialidades
-- grid de 4 a 6 cards
+- grid de 4 cards com variação de altura e largura
 - cada card com uma competência de QA
-- foco em legibilidade e variação mínima de layout
+- foco em legibilidade e variação intencional de layout
 
 ### 4. Projetos / Cases
-- cards com mini narrativa
+- trilha vertical de cards com mini narrativa
 - idealmente 2 a 4 cases
 - opção futura de expandir para detalhe interno
 
@@ -315,3 +341,5 @@ Footer
 | `referencias/stileGuide.jpg` | local | paleta, tipografia Maven Pro e contraste geral |
 | `referencias/13e53ed0470902a4e63049ce80403f41.jpg` | local | hero forte com foto em destaque e seções em cards |
 | `referencias/9f42e46ad5ae9d863738748dd2b3c1e8.jpg` | local | estrutura simples e legibilidade do topo |
+| `referencias/548abf66155c7d0f69a5635cceb35994.jpg` | local | presença fotográfica com halo e camadas escuras sofisticadas |
+| `referencias/9540b7f221e1c346b93c6f1a600382fa.jpg` | local | ritmo visual com padrão de fundo e hero de alta presença |

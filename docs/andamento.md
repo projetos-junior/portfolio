@@ -10,9 +10,9 @@
 
 | Campo | Valor |
 |-------|-------|
-| **Fase atual** | Planejamento |
+| **Fase atual** | Planejamento + implementação inicial |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 42% |
+| **Progresso geral** | 58% |
 | **Última atualização** | 2026-07-06 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -26,6 +26,7 @@
 |----|-----------|--------|--------|--------|------|
 | T01 | Definição inicial do PRD do portfólio pessoal de QA | Docs | VERA | _pendente_ | 2026-07-06 |
 | T02 | Definição inicial do design system e wireframe textual | Docs | LUMI/CANVAS | _pendente_ | 2026-07-06 |
+| T04 | Consolidação da copy inicial da home com base no currículo | Docs | VERA | _pendente_ | 2026-07-06 |
 
 ---
 
@@ -33,8 +34,7 @@
 
 | ID | Descrição | Camada | Agente | Iniciado em |
 |----|-----------|--------|--------|-------------|
-| T03 | Preparação da etapa de implementação do frontend | Frontend | FORGE | 2026-07-06 |
-| T04 | Consolidação da copy inicial da home com base no currículo | Docs | VERA | 2026-07-06 |
+| T03 | Implementação da landing page estática em HTML, CSS e JavaScript | Frontend | FORGE/LUMI | 2026-07-06 |
 
 ---
 
@@ -42,16 +42,16 @@
 
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
-| B01 | Ainda faltam a decisão de exibição do telefone e métricas publicáveis para enriquecer os cases | Médio | Usuário | Aberto |
+| B01 | Ainda faltam métricas publicáveis para enriquecer os cases | Médio | Usuário | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Decidir se o telefone aparecerá como ligação, WhatsApp ou ambos.
-2. Implementar a home responsiva com base em `docs/PRD.md` e `docs/DESIGN.md`.
-3. Validar acessibilidade, performance e consistência visual.
-4. Refinar cases com resultados mensuráveis e decidir se haverá página interna por projeto.
+1. Validar visualmente a landing page implementada e ajustar refinamentos de conteúdo.
+2. Validar acessibilidade, performance e consistência visual.
+3. Refinar cases com resultados mensuráveis e decidir se haverá página interna por projeto.
+4. Preparar publicação inicial do portfólio.
 
 ---
 
@@ -75,6 +75,7 @@
 | Usar o currículo enviado como fonte factual inicial do conteúdo | Aumentar aderência do portfólio à trajetória real | Reduz suposições no planejamento |
 | Criar a copy inicial da home antes da implementação | Acelerar frontend com narrativa já definida | Reduz retrabalho na montagem da interface |
 | Definir o e-mail final de contato antes da implementação | Evitar placeholder no frontend | Fecha o bloco principal de contato |
+| Adotar a direção visual "Precision Editorial" no layout | Fugir do visual genérico de portfólio e reforçar assinatura visual | Aumenta memorabilidade do projeto |
 
 ---
 

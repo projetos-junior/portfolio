@@ -34,7 +34,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 - [x] Copy inicial da home estruturada.
 - [x] E-mail final de contato definido.
 - [ ] Conteúdo real de projetos e contatos consolidado.
-- [ ] Implementação da home iniciada.
+- [x] Implementação da home iniciada.
 
 ---
 
@@ -46,20 +46,21 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 |----|--------|--------|--------|--------|
 | T01 | Criar PRD inicial do portfólio QA | Docs | VERA | _pendente_ |
 | T02 | Criar design system e wireframe textual | Docs | LUMI/CANVAS | _pendente_ |
+| T03 | Iniciar a implementação da landing page | Frontend | FORGE/LUMI | _pendente_ |
 
 ### 🔄 Em Andamento
 
 | ID | Título | Camada | Agente | Progresso |
 |----|--------|--------|--------|-----------|
-| T03 | Preparar implementação da landing page | Frontend | FORGE | 45% |
+| T04 | Implementar hero, sobre e especialidades | Frontend | FORGE/LUMI | 65% |
 
 ### 📋 Planejadas
 
 | ID | Título | Camada | Agente | Dependências |
 |----|--------|--------|--------|--------------|
-| T04 | Implementar hero, sobre e especialidades | Frontend | FORGE | T01, T02 |
-| T05 | Implementar projetos, stack e CTA final | Frontend | FORGE | T04 |
+| T05 | Refinar projetos, stack e CTA final | Frontend | FORGE | T04 |
 | T06 | Validar responsividade, acessibilidade e QA visual | QA | VALE | T05 |
+| T07 | Preparar publicação inicial | Deploy | ORION | T06 |
 
 ---
 
@@ -103,7 +104,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 - Definição dos links reais de contato
 - Confirmação dos projetos/cases que entrarão no MVP
 - Validação de métricas ou resultados que possam ser publicados
-- Decisão sobre exibição do telefone como ligação, WhatsApp ou ambos
+- Revisão visual final do layout implementado
 
 ---
 
@@ -118,3 +119,4 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 | O currículo anexado será a fonte inicial de conteúdo validado | Melhorar consistência entre apresentação e trajetória real | 2026-07-06 |
 | A home será implementada com uma copy inicial já estruturada no PRD | Facilitar execução visual e alinhamento de conteúdo | 2026-07-06 |
 | O e-mail final do portfólio será `edson.junior.qa@gmail.com` | Fechar o contato principal antes da implementação | 2026-07-06 |
+| A direção visual executada seguirá o conceito "Precision Editorial" | Tornar o layout moderno, dinâmico e memorável sem exagero visual | 2026-07-06 |
