@@ -12,7 +12,7 @@
 |-------|-------|
 | **Fase atual** | Planejamento |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 38% |
+| **Progresso geral** | 42% |
 | **Última atualização** | 2026-07-06 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -42,13 +42,13 @@
 
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
-| B01 | Ainda faltam o e-mail final, métricas publicáveis e eventual refinamento dos cases | Médio | Usuário | Aberto |
+| B01 | Ainda faltam a decisão de exibição do telefone e métricas publicáveis para enriquecer os cases | Médio | Usuário | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Confirmar o e-mail final e decidir se o telefone aparecerá como ligação, WhatsApp ou ambos.
+1. Decidir se o telefone aparecerá como ligação, WhatsApp ou ambos.
 2. Implementar a home responsiva com base em `docs/PRD.md` e `docs/DESIGN.md`.
 3. Validar acessibilidade, performance e consistência visual.
 4. Refinar cases com resultados mensuráveis e decidir se haverá página interna por projeto.
@@ -74,6 +74,7 @@
 | Usar HTML5 semântico, CSS3 moderno e JavaScript ES6+ no frontend | Manter stack simples, portátil e fácil de evoluir | Reduz complexidade inicial |
 | Usar o currículo enviado como fonte factual inicial do conteúdo | Aumentar aderência do portfólio à trajetória real | Reduz suposições no planejamento |
 | Criar a copy inicial da home antes da implementação | Acelerar frontend com narrativa já definida | Reduz retrabalho na montagem da interface |
+| Definir o e-mail final de contato antes da implementação | Evitar placeholder no frontend | Fecha o bloco principal de contato |
 
 ---
 

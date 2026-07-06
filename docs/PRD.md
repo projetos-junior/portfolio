@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.3 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.4 | **Status:** Planejamento inicial concluído
 
 ---
 
@@ -15,6 +15,7 @@
 | 1.1 | 2026-07-06 | Codex + VERA | Ajuste da stack do frontend para HTML5, CSS3 e JavaScript ES6+ |
 | 1.2 | 2026-07-06 | Codex + VERA | Incorporação do currículo como base factual do conteúdo |
 | 1.3 | 2026-07-06 | Codex + VERA | Criação da copy inicial da home e estrutura de contatos |
+| 1.4 | 2026-07-06 | Codex + VERA | Definição do e-mail final para contato no portfólio |
 
 ---
 
@@ -348,9 +349,8 @@ Se você busca um profissional de QA com olhar analítico, atenção aos detalhe
 - **LinkedIn:** `https://www.linkedin.com/in/edyjunior/`
 - **GitHub:** `https://github.com/projetos-junior`
 - **Telefone/WhatsApp:** `+55 11 98802-0276`
-- **E-mail:** `definir-email-final@pendente`
+- **E-mail:** `edson.junior.qa@gmail.com`
 
 ### 15.10 Pendências de conteúdo
-- Confirmar o e-mail final que substituirá o do currículo.
 - Validar se o telefone será exibido publicamente ou apenas via WhatsApp.
 - Refinar os mini-cases com resultados mensuráveis, se puder publicar.
