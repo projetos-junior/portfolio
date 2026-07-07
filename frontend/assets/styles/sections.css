@@ -185,8 +185,11 @@
   border: 1px solid rgba(184, 255, 231, 0.16);
   background: rgba(0, 228, 161, 0.08);
   color: var(--primary-soft);
-  font-size: 0.74rem;
-  font-weight: 800;
+}
+
+.proof-strip__badge svg {
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .proof-strip span,
