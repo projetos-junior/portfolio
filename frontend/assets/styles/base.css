@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  --scroll-y: 0px;
+  --scroll-progress: 0;
 }
 
 body {
@@ -29,6 +31,8 @@ body::before {
   mask-image: radial-gradient(circle at center, black 35%, transparent 88%);
   pointer-events: none;
   opacity: 0.35;
+  transform: translateY(calc(var(--scroll-y) * -0.035));
+  transition: transform 120ms linear;
 }
 
 img {

@@ -10,6 +10,22 @@ if (!prefersReducedMotion.matches) {
   document.documentElement.classList.add("motion-ready");
 }
 
+const setScrollMotion = () => {
+  if (prefersReducedMotion.matches) {
+    return;
+  }
+
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+
+  document.documentElement.style.setProperty("--scroll-y", `${window.scrollY}px`);
+  document.documentElement.style.setProperty("--scroll-progress", progress.toFixed(4));
+};
+
+setScrollMotion();
+window.addEventListener("scroll", setScrollMotion, { passive: true });
+window.addEventListener("resize", setScrollMotion);
+
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
