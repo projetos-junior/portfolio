@@ -276,6 +276,19 @@ textarea {
   height: 1.25rem;
 }
 
+.icon-link--labelled {
+  width: auto;
+  padding-inline: 1rem 1.15rem;
+  grid-auto-flow: column;
+  gap: 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+.icon-link--labelled span {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .icon-badge {
   display: inline-grid;
   place-items: center;
