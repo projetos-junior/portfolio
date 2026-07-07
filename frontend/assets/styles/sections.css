@@ -235,7 +235,7 @@
 
 .hero + .proof-strip::before,
 .proof-strip + .about::before {
-  opacity: 0.45;
+  opacity: 0.78;
 }
 
 .about__content {
