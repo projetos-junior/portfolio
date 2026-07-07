@@ -17,6 +17,7 @@ agents/
 agents copy/
 agents-optional/
 docs-templates/
+referencias/
 
 coverage/
 *.log
