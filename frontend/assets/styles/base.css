@@ -77,6 +77,25 @@ textarea {
 
 .section {
   padding: clamp(4rem, 7vw, 5.5rem) 0;
+  position: relative;
+}
+
+.section + .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(184, 255, 231, 0.08) 18%,
+    rgba(184, 255, 231, 0.18) 50%,
+    rgba(184, 255, 231, 0.08) 82%,
+    transparent
+  );
+  pointer-events: none;
 }
 
 .site-header {

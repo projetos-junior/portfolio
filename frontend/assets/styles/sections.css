@@ -233,6 +233,11 @@
   pointer-events: none;
 }
 
+.hero + .proof-strip::before,
+.proof-strip + .about::before {
+  opacity: 0.45;
+}
+
 .about__content {
   gap: var(--space-5);
   max-width: 42rem;
