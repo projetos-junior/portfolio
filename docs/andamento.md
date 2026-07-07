@@ -12,7 +12,7 @@
 |-------|-------|
 | **Fase atual** | Implementação inicial + refinamento visual |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 72% |
+| **Progresso geral** | 82% |
 | **Última atualização** | 2026-07-07 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -29,6 +29,7 @@
 | T04 | Consolidação da copy inicial da home com base no currículo | Docs | VERA | _pendente_ | 2026-07-06 |
 | T05 | Estruturação inicial da landing page e organização de assets | Frontend | FORGE | commits locais aplicados | 2026-07-06 |
 | T06 | Ajustes de CTA, contatos, hero, header e composição da seção sobre | Frontend | FORGE/LUMI | commits locais aplicados | 2026-07-07 |
+| T07 | Consolidação textual inicial dos cases com narrativa mais forte e fiel ao currículo | Conteúdo | VERA | commits locais aplicados | 2026-07-07 |
 
 ---
 
@@ -45,15 +46,15 @@
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
 | B01 | Ainda faltam métricas publicáveis para enriquecer os cases | Médio | Usuário | Aberto |
-| B02 | A seção de cases ainda depende de consolidação de conteúdo real para ganhar mais força | Médio | Usuário + VERA | Aberto |
+| B02 | Os cases já têm narrativa consolidada, mas ainda podem ganhar força com métricas ou resultados publicáveis | Médio | Usuário + VERA | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Consolidar o conteúdo real dos cases e resultados que podem ser publicados.
+1. Validar se há métricas, resultados ou exemplos adicionais que possam ser publicados nos cases.
 2. Validar responsividade, acessibilidade e consistência visual da home.
-3. Refinar a seção de projetos/cases com mais contexto e impacto.
+3. Atualizar `docs/sprint-atual.md` com o avanço das tasks de conteúdo e frontend.
 4. Preparar publicação inicial do portfólio.
 
 ---
