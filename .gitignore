@@ -12,6 +12,8 @@ Thumbs.db
 
 .vscode/
 .idea/
+.vercel/
+frontend/.vercel/
 
 agents/
 agents copy/
