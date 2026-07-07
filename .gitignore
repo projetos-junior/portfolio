@@ -13,6 +13,11 @@ Thumbs.db
 .vscode/
 .idea/
 
+agents/
+agents copy/
+agents-optional/
+docs-templates/
+
 coverage/
 *.log
 npm-debug.log*
