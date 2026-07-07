@@ -10,10 +10,10 @@
 
 | Campo | Valor |
 |-------|-------|
-| **Fase atual** | Planejamento + implementação inicial |
+| **Fase atual** | Implementação inicial + refinamento visual |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 58% |
-| **Última atualização** | 2026-07-06 |
+| **Progresso geral** | 72% |
+| **Última atualização** | 2026-07-07 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
 ---
@@ -27,6 +27,8 @@
 | T01 | Definição inicial do PRD do portfólio pessoal de QA | Docs | VERA | _pendente_ | 2026-07-06 |
 | T02 | Definição inicial do design system e wireframe textual | Docs | LUMI/CANVAS | _pendente_ | 2026-07-06 |
 | T04 | Consolidação da copy inicial da home com base no currículo | Docs | VERA | _pendente_ | 2026-07-06 |
+| T05 | Estruturação inicial da landing page e organização de assets | Frontend | FORGE | commits locais aplicados | 2026-07-06 |
+| T06 | Ajustes de CTA, contatos, hero, header e composição da seção sobre | Frontend | FORGE/LUMI | commits locais aplicados | 2026-07-07 |
 
 ---
 
@@ -34,7 +36,7 @@
 
 | ID | Descrição | Camada | Agente | Iniciado em |
 |----|-----------|--------|--------|-------------|
-| T03 | Implementação da landing page estática em HTML, CSS e JavaScript | Frontend | FORGE/LUMI | 2026-07-06 |
+| T03 | Implementação e refinamento da landing page estática em HTML, CSS e JavaScript | Frontend | FORGE/LUMI | 2026-07-06 |
 
 ---
 
@@ -43,14 +45,15 @@
 | ID | Bloqueio | Impacto | Quem Resolve | Status |
 |----|---------|---------|--------------|--------|
 | B01 | Ainda faltam métricas publicáveis para enriquecer os cases | Médio | Usuário | Aberto |
+| B02 | A seção de cases ainda depende de consolidação de conteúdo real para ganhar mais força | Médio | Usuário + VERA | Aberto |
 
 ---
 
 ## Próximos Passos
 
-1. Validar visualmente a landing page implementada e ajustar refinamentos de conteúdo.
-2. Validar acessibilidade, performance e consistência visual.
-3. Refinar cases com resultados mensuráveis e decidir se haverá página interna por projeto.
+1. Consolidar o conteúdo real dos cases e resultados que podem ser publicados.
+2. Validar responsividade, acessibilidade e consistência visual da home.
+3. Refinar a seção de projetos/cases com mais contexto e impacto.
 4. Preparar publicação inicial do portfólio.
 
 ---

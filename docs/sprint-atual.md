@@ -21,7 +21,7 @@
 
 ## Objetivo da Sprint
 
-Ao final desta sprint, o projeto terá PRD inicial, design system definido, wireframe textual das seções principais e base pronta para implementação frontend.
+Ao final desta sprint, o projeto terá PRD inicial, design system definido, wireframe textual das seções principais, home implementada e refinada visualmente para validação final.
 
 ---
 
@@ -52,13 +52,13 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 | ID | Título | Camada | Agente | Progresso |
 |----|--------|--------|--------|-----------|
-| T04 | Implementar hero, sobre e especialidades | Frontend | FORGE/LUMI | 65% |
+| T04 | Implementar hero, sobre, especialidades e navegação | Frontend | FORGE/LUMI | 85% |
 
 ### 📋 Planejadas
 
 | ID | Título | Camada | Agente | Dependências |
 |----|--------|--------|--------|--------------|
-| T05 | Refinar projetos, stack e CTA final | Frontend | FORGE | T04 |
+| T05 | Refinar projetos, stack, responsividade e CTA final | Frontend | FORGE | T04 |
 | T06 | Validar responsividade, acessibilidade e QA visual | QA | VALE | T05 |
 | T07 | Preparar publicação inicial | Deploy | ORION | T06 |
 
@@ -101,8 +101,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 ## Dependências Externas
 
-- Definição dos links reais de contato
-- Confirmação dos projetos/cases que entrarão no MVP
+- Consolidação do conteúdo real dos projetos/cases do MVP
 - Validação de métricas ou resultados que possam ser publicados
 - Revisão visual final do layout implementado
 
@@ -120,3 +119,5 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 | A home será implementada com uma copy inicial já estruturada no PRD | Facilitar execução visual e alinhamento de conteúdo | 2026-07-06 |
 | O e-mail final do portfólio será `edson.junior.qa@gmail.com` | Fechar o contato principal antes da implementação | 2026-07-06 |
 | A direção visual executada seguirá o conceito "Precision Editorial" | Tornar o layout moderno, dinâmico e memorável sem exagero visual | 2026-07-06 |
+| O CTA principal da home abrirá conversa direta no WhatsApp | Reduzir atrito de contato na primeira dobra | 2026-07-06 |
+| A navegação superior seguirá em barra sticky destacada, sem competir com o hero | Melhorar orientação e presença visual do topo | 2026-07-07 |

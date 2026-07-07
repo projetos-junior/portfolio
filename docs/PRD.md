@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.4 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.5 | **Status:** Planejamento inicial concluído
 
 ---
 
