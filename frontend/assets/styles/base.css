@@ -41,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary-soft);
+  outline-offset: 3px;
+}
+
 button,
 input,
 textarea {
@@ -51,6 +56,23 @@ textarea {
   width: var(--container);
   margin: 0 auto;
   padding-bottom: var(--space-9);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3.5rem;
+  z-index: 40;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: var(--surface-3);
+  font-weight: 800;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .section {
@@ -157,6 +179,10 @@ textarea {
   transform: scaleX(1);
 }
 
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 .menu-toggle {
   display: none;
   border: 1px solid var(--border);
@@ -201,6 +227,13 @@ textarea {
 
 .button:hover {
   transform: translateY(-2px);
+}
+
+.button:focus-visible,
+.icon-link:focus-visible,
+.menu-toggle:focus-visible,
+.contact__panel a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(184, 255, 231, 0.2);
 }
 
 .button--primary {
