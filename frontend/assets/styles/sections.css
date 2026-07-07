@@ -131,7 +131,7 @@
 
 .proof-strip {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.72fr) repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(14rem, 0.62fr) repeat(3, minmax(0, 1fr));
   gap: 0;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -147,28 +147,28 @@
 .proof-strip__intro,
 .proof-strip article {
   min-height: 100%;
-  padding: 1.6rem 1.5rem;
+  padding: 1.35rem 1.4rem;
   border-right: 1px solid rgba(184, 255, 231, 0.08);
 }
 
 .proof-strip__intro {
   display: grid;
-  align-content: space-between;
-  gap: var(--space-4);
+  align-content: center;
+  gap: var(--space-3);
   background:
     radial-gradient(circle at top left, rgba(0, 228, 161, 0.12), transparent 35%),
     rgba(31, 54, 73, 0.84);
 }
 
 .proof-strip__intro strong {
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
-  line-height: 1.4;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.35;
 }
 
 .proof-strip article {
   display: grid;
-  align-content: start;
-  gap: var(--space-3);
+  align-content: center;
+  gap: var(--space-2);
   background: rgba(52, 53, 91, 0.76);
 }
 
@@ -179,13 +179,13 @@
 .proof-strip__badge {
   display: inline-grid;
   place-items: center;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.35rem;
+  height: 2.35rem;
   border-radius: 50%;
   border: 1px solid rgba(184, 255, 231, 0.16);
   background: rgba(0, 228, 161, 0.08);
   color: var(--primary-soft);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 800;
 }
 
@@ -199,14 +199,14 @@
 
 .proof-strip strong {
   line-height: 1.4;
-  font-size: 1.12rem;
+  font-size: 1.02rem;
 }
 
 .proof-strip p {
   margin: 0;
   color: var(--text-soft);
-  line-height: 1.7;
-  font-size: 0.98rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
 }
 
 .about__grid,
@@ -556,6 +556,11 @@
   .proof-strip article {
     border-right: 0;
     border-bottom: 1px solid rgba(184, 255, 231, 0.08);
+  }
+
+  .proof-strip__intro,
+  .proof-strip article {
+    padding: 1.35rem 1.25rem;
   }
 
   .proof-strip article:last-child {
