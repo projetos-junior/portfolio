@@ -227,7 +227,7 @@
 .about::before {
   content: "";
   position: absolute;
-  inset: 4rem 0 auto;
+  inset: 0 0 auto;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(184, 255, 231, 0.1), transparent);
   pointer-events: none;
