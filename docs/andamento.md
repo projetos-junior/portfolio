@@ -10,9 +10,9 @@
 
 | Campo | Valor |
 |-------|-------|
-| **Fase atual** | Implementação inicial + refinamento visual |
+| **Fase atual** | Validação final + preparação para publicação |
 | **Sprint atual** | Sprint 1 — Estratégia e base visual |
-| **Progresso geral** | 82% |
+| **Progresso geral** | 90% |
 | **Última atualização** | 2026-07-07 |
 | **Responsável** | Codex com VERA/LUMI/CANVAS |
 
@@ -30,6 +30,7 @@
 | T05 | Estruturação inicial da landing page e organização de assets | Frontend | FORGE | commits locais aplicados | 2026-07-06 |
 | T06 | Ajustes de CTA, contatos, hero, header e composição da seção sobre | Frontend | FORGE/LUMI | commits locais aplicados | 2026-07-07 |
 | T07 | Consolidação textual inicial dos cases com narrativa mais forte e fiel ao currículo | Conteúdo | VERA | commits locais aplicados | 2026-07-07 |
+| T08 | Validação final de responsividade, foco por teclado, menu mobile e consistência visual | QA | VALE | commits locais aplicados | 2026-07-07 |
 
 ---
 
@@ -37,7 +38,7 @@
 
 | ID | Descrição | Camada | Agente | Iniciado em |
 |----|-----------|--------|--------|-------------|
-| T03 | Implementação e refinamento da landing page estática em HTML, CSS e JavaScript | Frontend | FORGE/LUMI | 2026-07-06 |
+| T03 | Preparação final da landing page estática em HTML, CSS e JavaScript para publicação | Frontend | FORGE/LUMI/ORION | 2026-07-06 |
 
 ---
 
@@ -53,8 +54,8 @@
 ## Próximos Passos
 
 1. Validar se há métricas, resultados ou exemplos adicionais que possam ser publicados nos cases.
-2. Validar responsividade, acessibilidade e consistência visual da home.
-3. Atualizar `docs/sprint-atual.md` com o avanço das tasks de conteúdo e frontend.
+2. Atualizar `docs/sprint-atual.md` com o fechamento de QA visual e avanço da sprint.
+3. Definir alvo de publicação inicial do portfólio.
 4. Preparar publicação inicial do portfólio.
 
 ---
@@ -80,6 +81,7 @@
 | Criar a copy inicial da home antes da implementação | Acelerar frontend com narrativa já definida | Reduz retrabalho na montagem da interface |
 | Definir o e-mail final de contato antes da implementação | Evitar placeholder no frontend | Fecha o bloco principal de contato |
 | Adotar a direção visual "Precision Editorial" no layout | Fugir do visual genérico de portfólio e reforçar assinatura visual | Aumenta memorabilidade do projeto |
+| Validar menu mobile, foco por teclado, ordem de leitura e reduced motion antes do handoff | Reduz risco de regressão visual e acessibilidade básica | Aumenta confiança para publicação |
 
 ---
 

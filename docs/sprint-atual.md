@@ -21,7 +21,7 @@
 
 ## Objetivo da Sprint
 
-Ao final desta sprint, o projeto terá PRD inicial, design system definido, wireframe textual das seções principais, home implementada e refinada visualmente para validação final.
+Ao final desta sprint, o projeto terá PRD inicial, design system definido, wireframe textual das seções principais, home validada em QA visual base e pronta para preparação de publicação.
 
 ---
 
@@ -33,8 +33,9 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 - [x] Conteúdo base do currículo incorporado ao planejamento.
 - [x] Copy inicial da home estruturada.
 - [x] E-mail final de contato definido.
-- [ ] Conteúdo real de projetos e contatos consolidado.
+- [x] Conteúdo base de projetos e contatos consolidado.
 - [x] Implementação da home iniciada.
+- [x] Responsividade e acessibilidade base validadas.
 
 ---
 
@@ -52,14 +53,14 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 | ID | Título | Camada | Agente | Progresso |
 |----|--------|--------|--------|-----------|
-| T04 | Implementar hero, sobre, especialidades e navegação | Frontend | FORGE/LUMI | 85% |
+| T04 | Implementar hero, sobre, especialidades e navegação | Frontend | FORGE/LUMI | 100% |
+| T05 | Refinar projetos, stack, responsividade e CTA final | Frontend | FORGE | 100% |
+| T06 | Validar responsividade, acessibilidade e QA visual | QA | VALE | 100% |
 
 ### 📋 Planejadas
 
 | ID | Título | Camada | Agente | Dependências |
 |----|--------|--------|--------|--------------|
-| T05 | Refinar projetos, stack, responsividade e CTA final | Frontend | FORGE | T04 |
-| T06 | Validar responsividade, acessibilidade e QA visual | QA | VALE | T05 |
 | T07 | Preparar publicação inicial | Deploy | ORION | T06 |
 
 ---
@@ -103,7 +104,7 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 
 - Consolidação do conteúdo real dos projetos/cases do MVP
 - Validação de métricas ou resultados que possam ser publicados
-- Revisão visual final do layout implementado
+- Definição do alvo de publicação inicial
 
 ---
 
@@ -121,3 +122,4 @@ Ao final desta sprint, o projeto terá PRD inicial, design system definido, wire
 | A direção visual executada seguirá o conceito "Precision Editorial" | Tornar o layout moderno, dinâmico e memorável sem exagero visual | 2026-07-06 |
 | O CTA principal da home abrirá conversa direta no WhatsApp | Reduzir atrito de contato na primeira dobra | 2026-07-06 |
 | A navegação superior seguirá em barra sticky destacada, sem competir com o hero | Melhorar orientação e presença visual do topo | 2026-07-07 |
+| A home só avança para publicação após validação de foco, ordem de leitura, menu mobile e reduced motion | Garantir qualidade mínima de uso antes do handoff | 2026-07-07 |
