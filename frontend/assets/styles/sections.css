@@ -159,9 +159,6 @@
 .toolkit__grid {
   display: grid;
   grid-template-columns: minmax(20rem, 27rem) minmax(0, 1fr);
-  grid-template-areas:
-    "panel heading"
-    "panel content";
   gap: var(--space-6);
   align-items: start;
 }
@@ -180,13 +177,12 @@
 }
 
 .about__content {
-  grid-area: content;
   gap: var(--space-5);
   max-width: 44rem;
+  align-content: start;
 }
 
 .about__heading {
-  grid-area: heading;
   max-width: 40rem;
   margin-bottom: 0;
 }
@@ -231,7 +227,7 @@
 }
 
 .about__panel {
-  grid-area: panel;
+  align-self: start;
   padding: var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -382,7 +378,6 @@
   .toolkit__grid,
   .specialties__grid {
     grid-template-columns: 1fr;
-    grid-template-areas: none;
   }
 
   .hero {
