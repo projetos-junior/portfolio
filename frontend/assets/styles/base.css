@@ -239,9 +239,10 @@ textarea {
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   transition:
-    transform var(--transition),
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
     background var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .button:hover {
@@ -277,10 +278,11 @@ textarea {
   background: rgba(52, 53, 91, 0.48);
   color: var(--text-soft);
   transition:
-    transform var(--transition),
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color var(--transition),
     color var(--transition),
-    background var(--transition);
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 .icon-link:hover {
@@ -324,13 +326,48 @@ textarea {
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity 420ms ease,
-    transform 420ms ease;
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.motion-ready .hero__copy.is-visible > * {
+  animation: fade-up 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion-ready .hero__copy.is-visible > *:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.motion-ready .hero__copy.is-visible > *:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.motion-ready .hero__copy.is-visible > *:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.motion-ready .hero__copy.is-visible > *:nth-child(4) {
+  animation-delay: 290ms;
+}
+
+.motion-ready .hero__copy.is-visible > *:nth-child(5) {
+  animation-delay: 360ms;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 860px) {
