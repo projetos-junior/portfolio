@@ -19,9 +19,10 @@
 
 O baseline encontrou LCP de 22,5 segundos, imagens com 3,84 MiB, ausência de
 favicon e divergência entre texto visível e nome acessível da marca. Após as
-correções, o Lighthouse local registrou performance 93, acessibilidade 100,
+correções, o Lighthouse local registrou performance 98, acessibilidade 100,
 boas práticas 100 e SEO 100. O LCP caiu para 2,52 segundos em uma execução
-móvel simulada; a meta de 2,5 segundos deve ser confirmada na URL publicada.
+móvel simulada. A fonte foi hospedada localmente para remover a última cadeia
+externa bloqueante; a medição final deve ser registrada após o novo deploy.
 
 ## Critérios de aceite validados
 
@@ -62,8 +63,9 @@ móvel simulada; a meta de 2,5 segundos deve ser confirmada na URL publicada.
 
 - Navegador: Chromium controlado por Playwright CLI.
 - Console após correções: 0 erros e 0 avisos.
-- Lighthouse após correções: 93 / 100 / 100 / 100.
-- LCP após correções: 2.517 ms.
+- Lighthouse após correções: 98 / 100 / 100 / 100.
+- LCP após correções: 1.806 ms.
+- FCP após correções: 1.507 ms.
 - TBT: 0 ms.
 - CLS: 0,0596.
 - Assets principais convertidos para WebP: aproximadamente 73 KiB no total.

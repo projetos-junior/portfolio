@@ -70,7 +70,7 @@ Não existem APIs próprias. A interface usa somente links externos:
 - WhatsApp por `https://wa.me/`;
 - LinkedIn e GitHub por HTTPS;
 - e-mail por `mailto:`;
-- Google Fonts para a família Maven Pro;
+- Maven Pro em WOFF2 servida pela mesma origem;
 - currículo e imagens servidos pela mesma origem.
 
 Falhas em serviços externos não devem impedir a leitura do conteúdo principal.
@@ -99,7 +99,7 @@ Falhas em serviços externos não devem impedir a leitura do conteúdo principal
 | Risco | Impacto | Mitigação |
 |---|---|---|
 | Imagens de origem grandes | Degrada LCP e consumo móvel | Gerar formatos e dimensões otimizados |
-| Dependência do Google Fonts | Pode atrasar tipografia ou falhar | Manter fallback local do sistema |
+| Arquivo de fonte indisponível | Altera a tipografia | Manter fallback do sistema |
 | Conteúdo sem métricas publicáveis | Reduz força dos cases | Validar métricas com o responsável |
 | Links externos mudarem | Quebra ações de conversão | Verificar antes de cada release |
 | Deploy não acompanhar `main` | Produção fica divergente | Comparar commit e smoke test no deploy |

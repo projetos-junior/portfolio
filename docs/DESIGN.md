@@ -62,8 +62,8 @@ Um layout dark-first com presença editorial, recortes geométricos assimétrico
 ### Fontes
 | Papel | Família | Pesos | Origem |
 |-------|---------|-------|--------|
-| Heading | Maven Pro | 600, 700, 800 | Google Fonts |
-| Body | Maven Pro | 400, 500, 600 | Google Fonts |
+| Heading | Maven Pro | 600, 700, 800 | WOFF2 hospedado localmente |
+| Body | Maven Pro | 400, 500, 600 | WOFF2 hospedado localmente |
 | Mono | JetBrains Mono | 400, 500 | Google Fonts |
 
 ### Escala Tipográfica

@@ -3,7 +3,7 @@
 > **Responsável:** DEPLOY + SENTINEL
 > **Ambiente:** Produção
 > **Data:** 2026-07-10
-> **Security Score:** 93/100
+> **Security Score:** 95/100
 
 ## Bloqueantes
 

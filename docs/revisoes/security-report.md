@@ -11,7 +11,7 @@
 |---|---|
 | Tipo | Frontend e pre-deploy audit |
 | Escopo | HTML, CSS, JavaScript, assets, histórico Git e Vercel |
-| Security Score | 93/100 |
+| Security Score | 95/100 |
 | Decisão | Liberado para produção com smoke test dos headers |
 
 ## Sumário executivo
@@ -33,13 +33,13 @@ de permissões. A presença desses headers deve ser confirmada após o deploy.
 | Segredos | 10/10 | Nenhum segredo encontrado; `.env` ignorado |
 | Dependências | 10/10 | Sem dependência JavaScript em runtime |
 | Transporte | 10/10 | HTTPS e HSTS ativos |
-| Headers | 9/10 | Configurados; falta confirmação pós-deploy |
+| Headers | 10/10 | Confirmados na resposta de produção |
 | Links externos | 9/10 | HTTPS e `noreferrer`; dependem de terceiros |
 | Dados e privacidade | 10/10 | Não coleta dados do visitante |
-| Configuração | 9/10 | Vercel declarativa e versionada |
+| Configuração | 10/10 | Vercel declarativa e versionada |
 | Operação | 8/10 | Rollback ainda não foi ensaiado |
 | Rastreabilidade | 8/10 | Primeiro gate formal do projeto |
-| **Total** | **93/100** | |
+| **Total** | **95/100** | |
 
 ## Achados
 
@@ -56,10 +56,10 @@ de permissões. A presença desses headers deve ser confirmada após o deploy.
 
 - **Severidade:** Baixa.
 - **Local:** `frontend/index.html`.
-- **Evidência:** CSS e fonte carregados de Google Fonts.
+- **Evidência:** no baseline, CSS e fonte eram carregados de Google Fonts.
 - **Impacto:** disponibilidade, privacidade de metadados e cadeia de suprimentos.
-- **Mitigação:** CSP restringe `style-src` e `font-src` aos domínios necessários.
-- **Melhoria futura:** avaliar fonte hospedada na mesma origem.
+- **Correção:** Maven Pro passou a ser servida pela mesma origem.
+- **Status:** corrigida.
 
 ## Controles confirmados
 

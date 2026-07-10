@@ -35,18 +35,17 @@
 | ID | Descrição | Responsável |
 |---|---|---|
 | B01 | Validar métricas publicáveis para os cases | Usuário/VERA |
-| B02 | Avaliar hospedagem local da fonte | FORGE |
-| B03 | Avaliar divisão futura do HTML com processo de build mínimo | ORION/FORGE |
+| B02 | Avaliar divisão futura do HTML com processo de build mínimo | ORION/FORGE |
 
 ## Métricas do gate local
 
 | Métrica | Baseline | Após correções |
 |---|---:|---:|
-| Lighthouse performance | 71 | 93 |
+| Lighthouse performance | 71 | 98 |
 | Acessibilidade | 100 | 100 |
 | Boas práticas | 96 | 100 |
 | SEO | 100 | 100 |
-| LCP | 22.509 ms | 2.517 ms |
+| LCP | 22.509 ms | 1.806 ms |
 | Console | 1 erro | 0 erros |
 
 ## Decisões
@@ -55,4 +54,5 @@
 - Manter o HTML como documento único para preservar conteúdo sem JavaScript.
 - Dividir o HTML somente quando existir um build mínimo que não complique o MVP.
 - Usar WebP para entrega e preservar os PNGs como fontes originais.
+- Hospedar Maven Pro na mesma origem para reduzir latência e dependência externa.
 - Bloquear o encerramento do gate até confirmar headers e paridade do deploy.
