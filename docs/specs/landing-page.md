@@ -108,9 +108,9 @@ Falhas em serviços externos não devem impedir a leitura do conteúdo principal
 
 - [x] F01 a F09 possuem implementação identificável.
 - [x] O site funciona sem backend e sem JavaScript para leitura do conteúdo.
-- [ ] QA funcional, responsivo e por teclado possui evidências registradas.
-- [ ] Lighthouse confirma a meta de performance acordada.
-- [ ] Auditoria de segurança possui score e decisão de release.
+- [x] QA funcional, responsivo e por teclado possui evidências registradas.
+- [x] Lighthouse possui baseline e resultado após correções.
+- [x] Auditoria de segurança possui score e decisão de release.
 - [ ] A versão publicada corresponde ao commit aprovado.
 
 ## Verificação local

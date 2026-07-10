@@ -1,71 +1,43 @@
-# Revisão de UX/UI
+# Revisão de UX/UI — Landing page
 
 > **Produzido por:** LUMI
-> **Quando:** Após finalizar wireframes e decisões de design
-> **Versão:** 0.1 | **Status:** A preencher
+> **Versão:** 1.0
+> **Status:** Aprovada
+> **Data:** 2026-07-10
 
----
+## Sumário executivo
 
-## Sumário Executivo
+A implementação segue a direção Precision Editorial definida no design system.
+A hierarquia conduz da proposta de valor para provas de atuação, cases,
+ferramentas e contato. O fluxo funciona em desktop e mobile sem depender de
+hover e preserva a leitura quando JavaScript não está disponível.
 
-_[LUMI descreve as principais decisões de design e o que foi validado]_
+## Jornada validada
 
----
+```text
+Hero → sinais de atuação → sobre → especialidades → cases → ferramentas → contato
+```
 
-## Jornada Principal Validada
+| Área | Status | Observação |
+|---|---|---|
+| Hero | Aprovada | Proposta, foto e CTA aparecem na primeira etapa |
+| Navegação | Aprovada | Âncoras no desktop e menu compacto no mobile |
+| Sobre | Aprovada | Narrativa e diferenciais possuem leitura escaneável |
+| Especialidades | Aprovada | Quatro frentes com hierarquia consistente |
+| Cases | Aprovada | Contexto, atuação e valor seguem sequência previsível |
+| Ferramentas | Aprovada | Agrupamento por uso reduz leitura de lista genérica |
+| Contato | Aprovada | Ações diretas e identificáveis |
 
-_[Fluxo passo a passo do usuário validado contra o PRD]_
+## Acessibilidade e movimento
 
----
+- O conteúdo usa landmarks, títulos hierárquicos e textos alternativos.
+- O `skip-link` permite saltar para o conteúdo principal.
+- O foco é visível e o menu mobile responde a teclado e `Escape`.
+- A implementação respeita `prefers-reduced-motion`.
+- O Lighthouse registrou acessibilidade 100 após as correções.
 
-## Mapa de Telas
+## Pontos futuros
 
-_[Lista de telas com status: definido / wireframe feito / aprovado]_
-
-| Tela | Status | Observações |
-|------|--------|-------------|
-| | | |
-
----
-
-## Decisões de Design
-
-| Decisão | Justificativa | Alternativas consideradas |
-|---------|--------------|--------------------------|
-| | | |
-
----
-
-## Referências Utilizadas
-
-| Referência | URL | O que inspirou |
-|------------|-----|----------------|
-| | | |
-
----
-
-## Pontos de Atenção para FORGE
-
-> O que o desenvolvedor precisa saber antes de implementar:
-
-- _[ex: O componente de calendário deve ser lazy loaded]_
-- _[ex: O modal de confirmação tem animação de slide-down]_
-
----
-
-## Checklist de Entrega
-
-- [ ] Jornada principal mapeada
-- [ ] Wireframes textuais de todas as telas do MVP
-- [ ] Estados de componentes definidos (loading, error, empty)
-- [ ] Responsividade descrita (mobile → desktop)
-- [ ] `docs/DESIGN.md` atualizado com paleta, tipografia e componentes
-- [ ] Referências documentadas
-
----
-
-## Histórico de Revisões
-
-| Versão | Data | Alterações |
-|--------|------|------------|
-| 0.1 | — | Criação do template |
+- Validar a narrativa com recrutadores reais.
+- Adicionar métricas aos cases somente quando forem publicáveis e verificáveis.
+- Avaliar hospedagem local da fonte para reduzir dependência externa.

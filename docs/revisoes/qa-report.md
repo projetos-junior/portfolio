@@ -1,112 +1,74 @@
-# Relatório de QA
+# Relatório de QA — Landing page
 
 > **Produzido por:** VALE
-> **Quando:** Após validação de cada entrega ou sprint
-> **Versão:** 0.1 | **Status:** A preencher
+> **Versão:** 1.0
+> **Status:** Aprovado para publicação após smoke test
+> **Data:** 2026-07-10
 
----
-
-## Sumário Executivo
+## Sumário executivo
 
 | Campo | Valor |
-|-------|-------|
-| **Sprint / Feature** | _[nome]_ |
-| **Data da validação** | AAAA-MM-DD |
-| **Total de cenários** | _[número]_ |
-| **Passou** | _[número]_ |
-| **Falhou** | _[número]_ |
-| **Bloqueado** | _[número]_ |
-| **Status geral** | ✅ Aprovado / ⚠️ Aprovado com ressalvas / ❌ Reprovado |
+|---|---|
+| Sprint | Sprint 2 — Hardening, evidências e publicação |
+| Escopo | Landing page estática, desktop e mobile |
+| Cenários executados | 9 |
+| Passou | 9 |
+| Falhou | 0 |
+| Bloqueado | 0 |
+| Status geral | Aprovado, condicionado ao smoke test do deploy |
 
----
+O baseline encontrou LCP de 22,5 segundos, imagens com 3,84 MiB, ausência de
+favicon e divergência entre texto visível e nome acessível da marca. Após as
+correções, o Lighthouse local registrou performance 93, acessibilidade 100,
+boas práticas 100 e SEO 100. O LCP caiu para 2,52 segundos em uma execução
+móvel simulada; a meta de 2,5 segundos deve ser confirmada na URL publicada.
 
-## Critérios de Aceite Validados
+## Critérios de aceite validados
 
-| ID | Critério (do PRD) | Status | Evidência |
-|----|------------------|--------|-----------|
-| CA01 | | ✅ / ❌ / ⚠️ | |
-| CA02 | | | |
+| ID | Critério | Status | Evidência |
+|---|---|---|---|
+| F01 | Hero legível com nome, proposta, foto e CTA | Passou | Snapshot desktop e mobile |
+| F02 | Trajetória e forma de trabalho compreensíveis | Passou | Árvore acessível |
+| F03 | Especialidades principais presentes | Passou | Quatro cards no DOM |
+| F04 | Cases apresentam contexto, atuação e valor | Passou | Três cases no DOM |
+| F05 | Ferramentas organizadas por contexto | Passou | Seis grupos no DOM |
+| F06 | Canais de contato disponíveis | Passou | E-mail, WhatsApp, LinkedIn e GitHub |
+| F07 | Responsividade e acessibilidade base | Passou | 390 x 844 e Lighthouse 100 |
+| F08 | Navegação por âncoras e menu mobile | Passou | Menu abre, fecha e responde a `Escape` |
+| F09 | Currículo disponível | Passou | PDF local responde com HTTP 200 |
 
----
+## Cenários executados
 
-## Cenários de Teste (Gherkin)
+1. Carregar a home em viewport desktop.
+2. Carregar a home em viewport móvel de 390 x 844.
+3. Abrir e fechar o menu mobile.
+4. Fechar o menu com `Escape` e devolver o foco ao botão.
+5. Validar a ordem semântica e os títulos da página.
+6. Validar textos alternativos das imagens.
+7. Validar âncoras internas e ausência de IDs duplicados.
+8. Validar carregamento dos assets e ausência de erro no console.
+9. Executar Lighthouse nas quatro categorias do gate.
 
-### Cenário 1 — [Nome]
-```gherkin
-Dado que [contexto/pré-condição]
-Quando [ação do usuário]
-Então [resultado esperado]
-```
-**Status:** ✅ Passou / ❌ Falhou  
-**Evidência:** _[print, log, descrição]_
+## Issues encontradas e tratadas
 
----
+| ID | Severidade | Descrição | Status |
+|---|---|---|---|
+| QA01 | Alta | LCP de 22,5 segundos por imagens PNG grandes | Corrigida |
+| QA02 | Baixa | Requisição de favicon retornava 404 | Corrigida |
+| QA03 | Baixa | Nome acessível da marca não incluía o texto visível | Corrigida |
+| QA04 | Baixa | Menu mobile não fechava com `Escape` | Corrigida |
 
-### Cenário 2 — [Nome]
-```gherkin
-Dado que [contexto]
-Quando [ação]
-Então [resultado]
-```
-**Status:**  
-**Evidência:**
+## Evidências técnicas
 
----
+- Navegador: Chromium controlado por Playwright CLI.
+- Console após correções: 0 erros e 0 avisos.
+- Lighthouse após correções: 93 / 100 / 100 / 100.
+- LCP após correções: 2.517 ms.
+- TBT: 0 ms.
+- CLS: 0,0596.
+- Assets principais convertidos para WebP: aproximadamente 73 KiB no total.
 
-## Issues Encontradas
+## Decisão final
 
-| ID | Tipo | Descrição | Severidade | Status |
-|----|------|-----------|------------|--------|
-| QA01 | Bug | | Crítica / Alta / Média / Baixa | Aberto |
-| QA02 | Melhoria | | | |
-
-### Classificação de Severidade
-- **Crítica:** Impede o uso — bloqueia o deploy
-- **Alta:** Impacto significativo — deve ser corrigido antes do deploy
-- **Média:** Reduz a qualidade — corrigir na próxima sprint
-- **Baixa:** Melhoria desejável — priorizar conforme backlog
-
----
-
-## Testes de Segurança Básicos
-
-| Teste | Status | Observação |
-|-------|--------|------------|
-| SQL Injection nos inputs | ✅ / ❌ / N/A | |
-| XSS em campos de texto | ✅ / ❌ / N/A | |
-| Acesso sem autenticação | ✅ / ❌ / N/A | |
-| Acesso sem autorização (IDOR) | ✅ / ❌ / N/A | |
-| Dados sensíveis em logs | ✅ / ❌ / N/A | |
-
----
-
-## Teste Exploratório
-
-| Área | Duração | Issues Encontradas | Lições |
-|------|---------|-------------------|--------|
-| | | | |
-
----
-
-## Recomendações
-
-> O que VALE sugere antes do próximo passo:
-
-- _[recomendação 1]_
-- _[recomendação 2]_
-
----
-
-## Decisão Final
-
-- [ ] ✅ **Aprovado para próxima fase** — todos os critérios críticos atendidos
-- [ ] ⚠️ **Aprovado com ressalvas** — issues não-críticas documentadas, prosseguir com cautela
-- [ ] ❌ **Reprovado** — issues críticas encontradas, retornar para FORGE
-
----
-
-## Histórico
-
-| Versão | Data | Alterações |
-|--------|------|------------|
-| 0.1 | — | Criação do template |
+**Aprovado para publicação com smoke test obrigatório.** Após o deploy, valide
+HTTP 200, headers, console, assets, CTA e correspondência com o commit aprovado.

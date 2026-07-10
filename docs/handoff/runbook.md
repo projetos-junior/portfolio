@@ -1,180 +1,69 @@
-# Runbook — Guia de Operação do Sistema
+# Runbook — Portfólio QA
 
-> **Produzido por:** DEPLOY (deploy-handoff.md)
-> **Quando:** Antes do primeiro deploy em produção
-> **Atualizado:** A cada mudança de infraestrutura ou processo
+> **Responsável:** DEPLOY
+> **Versão:** 1.0
+> **Atualizado:** 2026-07-10
 
----
+## Arquitetura
 
-## Identificação do Projeto
+O produto é um monólito modular frontend-first composto por HTML, CSS,
+JavaScript e assets estáticos. Não existem backend, banco de dados,
+autenticação, jobs ou variáveis de ambiente no MVP.
 
-| Campo | Valor |
-|-------|-------|
-| **Projeto** | _[nome do projeto]_ |
-| **Versão** | _[versão atual]_ |
-| **Última atualização** | AAAA-MM-DD |
-| **Responsável técnico** | _[nome/contato]_ |
-
----
-
-## Visão Geral da Arquitetura
-
-_[Descreva em 2-3 parágrafos a arquitetura do sistema: frontend, backend, banco, serviços externos]_
-
-```
-[Diagrama simplificado se necessário]
-Frontend → API → Banco de Dados
-                → Serviço externo A
-                → Serviço externo B
+```text
+Navegador → Vercel CDN → frontend/index.html e assets
+                     └→ links externos de contato
 ```
 
----
+## URLs e repositório
 
-## Pré-requisitos para Operar
+| Recurso | Valor |
+|---|---|
+| Produção | `https://edson-junior-qa.vercel.app/` |
+| Repositório | `https://github.com/projetos-junior/portfolio` |
+| Branch de produção | `main` |
+| Diretório publicado | `frontend` |
 
-### Acesso necessário
-- [ ] Acesso ao repositório Git
-- [ ] Credenciais do ambiente (desenvolvimento, homologação, produção)
-- [ ] Acesso ao provedor de cloud/hosting
-- [ ] Acesso ao painel de monitoramento
-- [ ] Acesso ao banco de dados (somente produção — restrito)
+## Execução local
 
-### Ferramentas necessárias
-| Ferramenta | Versão mínima | Instalação |
-|------------|---------------|------------|
-| _[ex: Node.js]_ | _[ex: 20.x]_ | _[ex: nodejs.org]_ |
-| _[ex: Docker]_ | _[ex: 24.x]_ | _[ex: docker.com]_ |
-| _[ex: Git]_ | _[ex: 2.x]_ | _[ex: git-scm.com]_ |
-
----
-
-## Setup Local (Desenvolvimento)
-
-```bash
-# 1. Clonar o repositório
-git clone [url-do-repositorio]
-cd [nome-do-projeto]
-
-# 2. Copiar e configurar variáveis de ambiente
-cp .env.example .env
-# Preencha as variáveis no .env
-
-# 3. Instalar dependências
-# [comando conforme stack — ex: npm install / composer install]
-
-# 4. Preparar banco de dados
-# [ex: npx prisma migrate dev / php artisan migrate]
-
-# 5. Iniciar a aplicação
-# [ex: npm run dev / php artisan serve]
+```powershell
+python -m http.server 4173 --directory frontend
 ```
 
----
+Acesse `http://127.0.0.1:4173/`. O MVP não exige instalação, build ou `.env`.
 
-## Deploy — Passo a Passo
+## Deploy
 
-### Pré-deploy
-1. Verificar `docs/checklists/pre-deploy.md` — todos os itens marcados
-2. Confirmar Security Score >= 85 em `docs/revisoes/security-report.md`
-3. Notificar stakeholders sobre o deploy
+1. Confirme que `main` está limpa e sincronizada.
+2. Verifique QA, segurança e checklist de pré-deploy.
+3. Envie os commits aprovados para `origin/main`.
+4. Aguarde o deploy automático da Vercel.
+5. Execute o smoke test na URL de produção.
+6. Registre commit, data e resultado em `docs/andamento.md`.
 
-### Processo de Deploy
+## Smoke test
 
-```bash
-# [Adapte conforme sua stack e provedor]
-
-# 1. Atualizar branch principal
-git checkout main
-git pull origin main
-
-# 2. Build de produção
-# [ex: npm run build]
-
-# 3. Aplicar migrations (se houver)
-# [ex: npx prisma migrate deploy]
-
-# 4. Deploy na plataforma
-# [ex: vercel deploy --prod / railway up / docker compose up -d]
-```
-
-### Verificação Pós-Deploy (Smoke Tests)
-1. Acessar a URL de produção
-2. Testar login/autenticação
-3. Executar o fluxo principal
-4. Verificar logs nos primeiros 10 minutos
-
----
+1. Confirme HTTP 200 na home, CSS, JavaScript, WebP e PDF.
+2. Confirme CSP, HSTS, `nosniff`, proteção contra framing e referrer policy.
+3. Abra a home em desktop e mobile.
+4. Teste menu, `Escape`, âncoras, WhatsApp, LinkedIn e currículo.
+5. Confirme ausência de erro no console e na rede.
+6. Compare um marcador do HTML publicado com o commit aprovado.
 
 ## Rollback
 
-### Quando executar rollback
-- Erros críticos nos logs após o deploy
-- Fluxos principais quebrados (smoke tests falhando)
-- Degradação significativa de performance
-- Decisão do responsável técnico ou stakeholder
+Use o painel da Vercel para promover o deployment anterior ou reverta o commit
+de release com `git revert`, envie para `main` e aguarde um novo deploy.
 
-### Processo de Rollback
+Tempo estimado: 5 a 10 minutos. Execute novo smoke test após o rollback.
 
-```bash
-# [Adapte conforme a plataforma]
+## Variáveis de ambiente
 
-# Opção 1: Reverter para versão anterior (Git tag)
-git checkout tags/v[versao-anterior]
-# [redeployar]
+Nenhuma variável é necessária no MVP. `.env.example` registra essa decisão.
+Qualquer variável futura deve ser documentada antes do uso e configurada no
+ambiente da Vercel sem versionar valores reais.
 
-# Opção 2: Rollback pela plataforma
-# [comandos específicos do provedor]
-```
+## Monitoramento
 
-### Tempo estimado de rollback
-_[ex: 5-10 minutos para reverter e redeployar]_
-
----
-
-## Variáveis de Ambiente
-
-> Para os valores reais, consulte o gerenciador de segredos do projeto (nunca no repositório).
-
-| Variável | Ambiente | Descrição |
-|----------|----------|-----------|
-| _[VARIAVEL_1]_ | Todos | _[descrição]_ |
-| _[VARIAVEL_2]_ | Produção | _[descrição]_ |
-| _[VARIAVEL_3]_ | Dev/Staging | _[descrição]_ |
-
----
-
-## Monitoramento e Alertas
-
-| O que monitorar | Ferramenta | Limite de alerta |
-|----------------|------------|------------------|
-| Uptime | _[ex: UptimeRobot]_ | < 99.5% |
-| Erros de API | _[ex: Sentry]_ | > 5 erros/minuto |
-| Performance | _[ex: Datadog]_ | P95 > 2s |
-| Banco de dados | _[ex: logs da plataforma]_ | Conexões esgotadas |
-
----
-
-## Contatos de Emergência
-
-| Situação | Contato | Canal |
-|----------|---------|-------|
-| Incidente de segurança | _[nome]_ | _[email/slack]_ |
-| Infraestrutura fora do ar | _[nome]_ | _[email/slack]_ |
-| Banco de dados | _[nome]_ | _[email/slack]_ |
-
----
-
-## Serviços Externos e Dependências
-
-| Serviço | Finalidade | URL de Status | Plano |
-|---------|-----------|---------------|-------|
-| _[ex: Stripe]_ | Pagamentos | _[status page]_ | _[plano]_ |
-| _[ex: SendGrid]_ | Emails transacionais | _[status page]_ | _[plano]_ |
-
----
-
-## Histórico de Deploys
-
-| Versão | Data | Ambiente | Notas | Responsável |
-|--------|------|----------|-------|-------------|
-| — | — | — | Criação do runbook | — |
+O MVP depende dos logs e analytics operacionais da Vercel. Recomenda-se
+adicionar monitoramento de uptime após a primeira release estável.

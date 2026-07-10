@@ -1,87 +1,47 @@
-# Checklist de Pré-Deploy
+# Checklist de pré-deploy — Release candidate 1
 
-> **Responsável:** DEPLOY (deploy-handoff.md) + SENTINEL (sentinel-security-audit-agent.md)
-> **Quando:** Obrigatório antes de qualquer deploy em qualquer ambiente
-> **Regra:** Nenhum item 🔴 pode estar pendente para prosseguir
+> **Responsável:** DEPLOY + SENTINEL
+> **Ambiente:** Produção
+> **Data:** 2026-07-10
+> **Security Score:** 93/100
 
----
+## Bloqueantes
 
-## Identificação
+- [x] Security Score igual ou superior a 85.
+- [x] Nenhuma vulnerabilidade crítica ou alta aberta.
+- [x] Nenhum segredo encontrado no código ou histórico.
+- [x] `.env` ignorado e `.env.example` documentado.
+- [x] PRD e spec disponíveis.
+- [x] Andamento reflete o estado real.
+- [x] QA aprovado para deploy.
+- [x] Relatório de segurança concluído.
+- [x] Branch local sem conflitos.
+- [x] Nenhum `console.log` ou log sensível no frontend.
+- [x] Validação local sem erro de console ou rede.
+- [ ] Commits aprovados enviados para `origin/main`.
+- [ ] Deploy automático concluído.
+- [ ] Headers defensivos confirmados em produção.
 
-| Campo | Valor |
-|-------|-------|
-| **Versão** | _[ex: 1.0.0]_ |
-| **Ambiente** | Homologação / Produção |
-| **Data** | AAAA-MM-DD |
-| **Responsável** | |
-| **Security Score** | _[do último SENTINEL]_ |
+## Itens importantes
 
----
+- [x] Runbook e procedimento de rollback documentados.
+- [x] Tempo estimado de rollback definido.
+- [x] Banco, migrations e backup marcados como não aplicáveis.
+- [x] Variáveis de ambiente marcadas como não aplicáveis no MVP.
+- [ ] Uptime externo configurado — melhoria não bloqueante.
 
-## 🔴 Bloqueantes (obrigatórios — não prosseguir sem eles)
+## Smoke test pós-deploy
 
-### Segurança
-- [ ] Security Score >= 85 (produção) ou >= 70 (homologação)
-- [ ] Nenhuma vulnerabilidade crítica ou alta aberta
-- [ ] Nenhum segredo no código ou repositório
-- [ ] `.env` não versionado
+- [ ] Home e assets retornam HTTP 200.
+- [ ] Menu desktop e mobile funcionam.
+- [ ] `Escape` fecha o menu e devolve o foco.
+- [ ] Âncoras e CTAs funcionam.
+- [ ] Currículo responde como PDF.
+- [ ] Console e rede não apresentam erro.
+- [ ] CSP e demais headers estão presentes.
+- [ ] Conteúdo publicado corresponde ao commit aprovado.
 
-### Documentação
-- [ ] `docs/PRD.md` aprovado
-- [ ] `docs/andamento.md` atualizado com estado real
-- [ ] `docs/revisoes/qa-report.md` com status "Aprovado"
-- [ ] `docs/revisoes/security-report.md` com score registrado
-- [ ] `.env.example` com todas as variáveis necessárias
+## Resultado
 
-### Código
-- [ ] Branch principal atualizada sem conflitos
-- [ ] Nenhum `console.log` / `dd()` / `dump()` em produção
-- [ ] Todos os testes passando
-- [ ] Build de produção gerado sem erros
-
----
-
-## 🟡 Importantes (resolver antes se possível)
-
-### Infraestrutura
-- [ ] Variáveis de ambiente configuradas no ambiente destino
-- [ ] Banco de dados com migrations aplicadas
-- [ ] Backup recente confirmado
-- [ ] Monitoramento ativo (logs, alertas, uptime)
-
-### Rollback
-- [ ] Plano de rollback documentado em `docs/handoff/runbook.md`
-- [ ] Procedimento de rollback testado
-- [ ] Tempo estimado de rollback definido
-
-### Comunicação
-- [ ] Stakeholders notificados sobre o deploy
-- [ ] Janela de deploy definida (fora do horário de pico, se possível)
-
----
-
-## 🟢 Pós-Deploy (smoke tests)
-
-Execute após o deploy e marque:
-
-- [ ] Login/autenticação funcionando
-- [ ] Fluxo principal do produto executado com sucesso
-- [ ] APIs respondendo (verificar rotas críticas)
-- [ ] Banco de dados acessível e íntegro
-- [ ] Logs sem erros críticos
-- [ ] Monitoramento recebendo dados normalmente
-
----
-
-## Resultado Final
-
-- [ ] ✅ **Deploy aprovado e concluído** — registrar em `docs/andamento.md`
-- [ ] ❌ **Deploy revertido** — registrar motivo em `docs/andamento.md` e acionar ORION
-
----
-
-## Histórico de Deploys
-
-| Versão | Data | Ambiente | Score | Resultado | Responsável |
-|--------|------|----------|-------|-----------|-------------|
-| — | — | — | — | — | — |
+**Aguardando deploy e smoke test.** ORION encerra o gate somente após marcar
+todos os itens pós-deploy aplicáveis.

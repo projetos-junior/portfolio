@@ -1,132 +1,77 @@
-# Relatório de Segurança
+# Relatório de segurança — Frontend estático
 
-> **Produzido por:** SHIELD (durante desenvolvimento) / SENTINEL (auditoria formal)
-> **Quando:** SHIELD — durante cada sprint; SENTINEL — antes de homologação e produção
-> **Versão:** 0.1 | **Status:** A preencher
+> **Produzido por:** SENTINEL
+> **Versão:** 1.0
+> **Status:** Aprovado para deploy e verificação em produção
+> **Data:** 2026-07-10
 
----
-
-## Identificação da Auditoria
+## Identificação
 
 | Campo | Valor |
-|-------|-------|
-| **Tipo** | Quick Scan / Full Audit / Pre-Deploy Audit / API Audit / Frontend Audit |
-| **Agente** | SHIELD / SENTINEL |
-| **Data** | AAAA-MM-DD |
-| **Escopo** | _[o que foi analisado: feature, módulo, sprint, projeto completo]_ |
-| **Security Score** | _[0–100]_ |
-| **Decisão de Deploy** | 🔴 Bloqueado (<70) / 🟡 Homologação apenas (70–84) / 🟢 Liberado para produção (≥85) |
+|---|---|
+| Tipo | Frontend e pre-deploy audit |
+| Escopo | HTML, CSS, JavaScript, assets, histórico Git e Vercel |
+| Security Score | 93/100 |
+| Decisão | Liberado para produção com smoke test dos headers |
 
----
+## Sumário executivo
 
-## Sumário Executivo
+O frontend não processa entrada do usuário, não possui backend, autenticação,
+cookies ou armazenamento local. A busca não encontrou segredos, sinks de DOM
+XSS, execução dinâmica, mensagens entre janelas ou tokens no histórico Git.
 
-_[SHIELD/SENTINEL resume os achados principais em 2-3 parágrafos]_
+O ambiente publicado já usa HTTPS e HSTS. A auditoria encontrou ausência dos
+demais headers defensivos na versão anterior. `frontend/vercel.json` agora
+define CSP, proteção contra framing, `nosniff`, política de referrer e política
+de permissões. A presença desses headers deve ser confirmada após o deploy.
 
----
+## Score por categoria
 
-## Security Score por Categoria
+| Categoria | Score | Observação |
+|---|---:|---|
+| Frontend | 10/10 | Sem sinks perigosos ou dados sensíveis |
+| Segredos | 10/10 | Nenhum segredo encontrado; `.env` ignorado |
+| Dependências | 10/10 | Sem dependência JavaScript em runtime |
+| Transporte | 10/10 | HTTPS e HSTS ativos |
+| Headers | 9/10 | Configurados; falta confirmação pós-deploy |
+| Links externos | 9/10 | HTTPS e `noreferrer`; dependem de terceiros |
+| Dados e privacidade | 10/10 | Não coleta dados do visitante |
+| Configuração | 9/10 | Vercel declarativa e versionada |
+| Operação | 8/10 | Rollback ainda não foi ensaiado |
+| Rastreabilidade | 8/10 | Primeiro gate formal do projeto |
+| **Total** | **93/100** | |
 
-| Categoria | Score (0–10) | Observação |
-|-----------|-------------|------------|
-| Autenticação / Autorização | /10 | |
-| APIs | /10 | |
-| Frontend | /10 | |
-| Infraestrutura | /10 | |
-| Dependências | /10 | |
-| Segredos | /10 | |
-| Upload | /10 | N/A se não houver upload |
-| Logs | /10 | |
-| Configuração | /10 | |
-| Multi-tenant | /10 | N/A se não aplicável |
-| **TOTAL** | **/100** | |
+## Achados
 
----
+### SEC-01 — Headers defensivos ausentes
 
-## Vulnerabilidades Encontradas
+- **Severidade:** Média.
+- **Local:** resposta da URL de produção antes deste gate.
+- **Evidência:** apenas `Strict-Transport-Security` estava presente.
+- **Impacto:** menor defesa em profundidade contra XSS, framing e MIME sniffing.
+- **Correção:** headers declarados em `frontend/vercel.json`.
+- **Validação pendente:** confirmar a resposta HTTP após a publicação.
 
-### 🔴 Críticas (bloquear imediatamente)
+### SEC-02 — Dependência externa de fonte
 
-| ID | Descrição | Evidência | Impacto | Recomendação |
-|----|-----------|-----------|---------|--------------|
-| SEC01 | | | | |
+- **Severidade:** Baixa.
+- **Local:** `frontend/index.html`.
+- **Evidência:** CSS e fonte carregados de Google Fonts.
+- **Impacto:** disponibilidade, privacidade de metadados e cadeia de suprimentos.
+- **Mitigação:** CSP restringe `style-src` e `font-src` aos domínios necessários.
+- **Melhoria futura:** avaliar fonte hospedada na mesma origem.
 
-### 🟠 Altas (corrigir antes do deploy)
+## Controles confirmados
 
-| ID | Descrição | Evidência | Impacto | Recomendação |
-|----|-----------|-----------|---------|--------------|
-| SEC10 | | | | |
+- Nenhum segredo ou `.env` versionado.
+- Nenhum `innerHTML`, `eval`, `document.write` ou `javascript:`.
+- Nenhum `localStorage`, `sessionStorage` ou `postMessage`.
+- Nenhum script de terceiro.
+- Links externos usam HTTPS e `noreferrer` quando abrem nova aba.
+- CSP não usa `unsafe-inline` ou `unsafe-eval`.
+- Currículo e imagens são arquivos estáticos da mesma origem.
 
-### 🟡 Médias (corrigir na próxima sprint)
+## Decisão final
 
-| ID | Descrição | Recomendação |
-|----|-----------|--------------|
-| SEC20 | | |
-
-### 🔵 Baixas / Informativas
-
-| ID | Descrição | Observação |
-|----|-----------|------------|
-| SEC30 | | |
-
----
-
-## Checklist de Segurança
-
-### Autenticação
-- [ ] JWT com tempo de expiração adequado
-- [ ] Refresh token implementado corretamente
-- [ ] Senhas com hash (bcrypt ou argon2)
-- [ ] Rate limiting no endpoint de login
-- [ ] Logout invalida token no servidor
-
-### Autorização
-- [ ] Controle de acesso horizontal (usuário só acessa seus próprios dados)
-- [ ] Controle de acesso vertical (roles e permissões corretas)
-- [ ] Endpoints admin protegidos
-
-### APIs
-- [ ] CORS configurado corretamente (não wildcard em produção)
-- [ ] Rate limiting nas rotas públicas
-- [ ] Swagger/OpenAPI protegido ou desabilitado em produção
-- [ ] Validação de input em todos os endpoints
-- [ ] Sem SQL Injection possível
-- [ ] Proteção CSRF implementada
-
-### Segredos
-- [ ] Nenhum segredo hardcoded no código
-- [ ] `.env` não está no repositório
-- [ ] `.env.example` documentado
-
-### Frontend
-- [ ] CSP (Content Security Policy) configurado
-- [ ] Sem dados sensíveis no LocalStorage
-- [ ] XSS protegido (sanitização de outputs)
-- [ ] HTTPS obrigatório
-
-### Infraestrutura
-- [ ] Docker sem containers privilegiados desnecessários
-- [ ] Portas desnecessárias fechadas
-- [ ] Variáveis de ambiente configuradas no ambiente (não no código)
-
----
-
-## Recomendações de Arquitetura de Segurança
-
-_[SHIELD/SENTINEL lista melhorias estruturais de médio/longo prazo]_
-
----
-
-## Decisão Final
-
-- [ ] 🔴 **Score < 70** — Deploy BLOQUEADO. Retornar para FORGE e corrigir issues críticas.
-- [ ] 🟡 **Score 70–84** — Deploy permitido apenas em **homologação**. Não vai para produção.
-- [ ] 🟢 **Score ≥ 85** — Deploy **liberado para produção**. DEPLOY pode prosseguir.
-
----
-
-## Histórico de Auditorias
-
-| Versão | Data | Tipo | Score | Agente |
-|--------|------|------|-------|--------|
-| 0.1 | — | — | — | — |
+**Deploy liberado.** ORION deve bloquear o encerramento do gate se os headers
+configurados não estiverem presentes na resposta de produção.
