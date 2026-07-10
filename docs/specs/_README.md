@@ -52,7 +52,7 @@ Como verificar que a implementação está completa e correta.
 
 | Arquivo | Feature | Agente | Status |
 |---------|---------|--------|--------|
-| _(vazio — aguardando FORGE)_ | | | |
+| `landing-page.md` | Landing page do portfólio | FORGE | Implementada — `as built` |
 
 ---
 
