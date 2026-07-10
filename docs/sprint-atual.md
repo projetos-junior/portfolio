@@ -9,7 +9,7 @@
 |---|---|
 | Nome | Sprint 2 — Hardening, evidências e publicação |
 | Objetivo | Fechar o gate técnico e sincronizar a release na Vercel |
-| Status | Em andamento — smoke test de produção pendente |
+| Status | Concluída |
 | Início | 2026-07-10 |
 | Fim previsto | 2026-07-12 |
 | Responsável | ORION |
@@ -23,8 +23,8 @@
 - [x] Auditoria de segurança concluída.
 - [x] Headers defensivos configurados.
 - [x] Runbook e `.env.example` atualizados.
-- [ ] Deploy corresponde ao commit aprovado.
-- [ ] Smoke test de produção aprovado.
+- [x] Deploy corresponde ao commit aprovado.
+- [x] Smoke test de produção aprovado.
 
 ## Tasks
 
@@ -35,7 +35,7 @@
 | T11 | Otimizar mídia e interação mobile | FORGE | Concluída |
 | T12 | Auditar e endurecer segurança | SENTINEL | Concluída |
 | T13 | Atualizar relatórios e runbook | ORION/DEPLOY | Concluída |
-| T14 | Publicar e executar smoke test | DEPLOY/VALE | Em andamento |
+| T14 | Publicar e executar smoke test | DEPLOY/VALE | Concluída |
 | T15 | Validar métricas dos cases | Usuário/VERA | Backlog não bloqueante |
 
 ## Riscos ativos

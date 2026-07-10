@@ -111,7 +111,7 @@ Falhas em serviços externos não devem impedir a leitura do conteúdo principal
 - [x] QA funcional, responsivo e por teclado possui evidências registradas.
 - [x] Lighthouse possui baseline e resultado após correções.
 - [x] Auditoria de segurança possui score e decisão de release.
-- [ ] A versão publicada corresponde ao commit aprovado.
+- [x] A versão publicada corresponde ao commit aprovado.
 
 ## Verificação local
 

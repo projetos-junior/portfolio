@@ -2,7 +2,7 @@
 
 > **Produzido por:** VALE
 > **Versão:** 1.0
-> **Status:** Aprovado para publicação após smoke test
+> **Status:** Aprovado em produção
 > **Data:** 2026-07-10
 
 ## Sumário executivo
@@ -15,14 +15,14 @@
 | Passou | 9 |
 | Falhou | 0 |
 | Bloqueado | 0 |
-| Status geral | Aprovado, condicionado ao smoke test do deploy |
+| Status geral | Aprovado em produção |
 
 O baseline encontrou LCP de 22,5 segundos, imagens com 3,84 MiB, ausência de
 favicon e divergência entre texto visível e nome acessível da marca. Após as
 correções, o Lighthouse local registrou performance 98, acessibilidade 100,
 boas práticas 100 e SEO 100. O LCP caiu para 2,52 segundos em uma execução
 móvel simulada. A fonte foi hospedada localmente para remover a última cadeia
-externa bloqueante; a medição final deve ser registrada após o novo deploy.
+externa bloqueante. A medição final em produção confirmou a meta do PRD.
 
 ## Critérios de aceite validados
 
@@ -63,14 +63,14 @@ externa bloqueante; a medição final deve ser registrada após o novo deploy.
 
 - Navegador: Chromium controlado por Playwright CLI.
 - Console após correções: 0 erros e 0 avisos.
-- Lighthouse após correções: 98 / 100 / 100 / 100.
-- LCP após correções: 1.806 ms.
-- FCP após correções: 1.507 ms.
+- Lighthouse em produção: 98 / 100 / 100 / 100.
+- LCP em produção: 1.360 ms.
+- FCP em produção: 1.060 ms.
 - TBT: 0 ms.
 - CLS: 0,0596.
 - Assets principais convertidos para WebP: aproximadamente 73 KiB no total.
 
 ## Decisão final
 
-**Aprovado para publicação com smoke test obrigatório.** Após o deploy, valide
-HTTP 200, headers, console, assets, CTA e correspondência com o commit aprovado.
+**Aprovado em produção.** HTTP, headers, console, assets e correspondência com
+o commit foram validados em 2026-07-10.

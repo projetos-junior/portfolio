@@ -7,10 +7,10 @@
 
 | Campo | Valor |
 |---|---|
-| Fase atual | Release candidate — validação de produção |
+| Fase atual | MVP publicado e validado em produção |
 | Sprint atual | Sprint 2 — Hardening, evidências e publicação |
-| Progresso geral | 97% |
-| Gate | Aprovado localmente; smoke test de produção pendente |
+| Progresso geral | 100% do MVP |
+| Gate | Aprovado em produção |
 | Responsável | ORION |
 
 ## Entregas concluídas
@@ -24,11 +24,11 @@
 | T12 | Auditoria e headers defensivos | SENTINEL | `security-report.md` |
 | T13 | Runbook e documentação de release | DEPLOY/ORION | `docs/handoff/runbook.md` |
 
-## Em andamento
+## Última entrega
 
 | ID | Descrição | Agente | Critério de conclusão |
 |---|---|---|---|
-| T14 | Sincronizar Vercel e executar smoke test | DEPLOY/VALE | Produção corresponde ao commit aprovado |
+| T14 | Sincronizar Vercel e executar smoke test | DEPLOY/VALE | Concluída em 2026-07-10 |
 
 ## Backlog não bloqueante
 
@@ -41,11 +41,11 @@
 
 | Métrica | Baseline | Após correções |
 |---|---:|---:|
-| Lighthouse performance | 71 | 98 |
+| Lighthouse performance | 71 | 98 em produção |
 | Acessibilidade | 100 | 100 |
 | Boas práticas | 96 | 100 |
 | SEO | 100 | 100 |
-| LCP | 22.509 ms | 1.806 ms |
+| LCP | 22.509 ms | 1.360 ms em produção |
 | Console | 1 erro | 0 erros |
 
 ## Decisões

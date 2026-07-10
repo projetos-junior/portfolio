@@ -2,7 +2,7 @@
 
 > **Produzido por:** SENTINEL
 > **Versão:** 1.0
-> **Status:** Aprovado para deploy e verificação em produção
+> **Status:** Aprovado em produção
 > **Data:** 2026-07-10
 
 ## Identificação
@@ -12,7 +12,7 @@
 | Tipo | Frontend e pre-deploy audit |
 | Escopo | HTML, CSS, JavaScript, assets, histórico Git e Vercel |
 | Security Score | 95/100 |
-| Decisão | Liberado para produção com smoke test dos headers |
+| Decisão | Liberado para produção |
 
 ## Sumário executivo
 
@@ -21,9 +21,9 @@ cookies ou armazenamento local. A busca não encontrou segredos, sinks de DOM
 XSS, execução dinâmica, mensagens entre janelas ou tokens no histórico Git.
 
 O ambiente publicado já usa HTTPS e HSTS. A auditoria encontrou ausência dos
-demais headers defensivos na versão anterior. `frontend/vercel.json` agora
+demais headers defensivos na versão anterior. `vercel.json` agora
 define CSP, proteção contra framing, `nosniff`, política de referrer e política
-de permissões. A presença desses headers deve ser confirmada após o deploy.
+de permissões. Esses headers foram confirmados na resposta de produção.
 
 ## Score por categoria
 
@@ -46,11 +46,11 @@ de permissões. A presença desses headers deve ser confirmada após o deploy.
 ### SEC-01 — Headers defensivos ausentes
 
 - **Severidade:** Média.
-- **Local:** resposta da URL de produção antes deste gate.
+- **Local:** resposta da URL de produção no baseline deste gate.
 - **Evidência:** apenas `Strict-Transport-Security` estava presente.
 - **Impacto:** menor defesa em profundidade contra XSS, framing e MIME sniffing.
-- **Correção:** headers declarados em `frontend/vercel.json`.
-- **Validação pendente:** confirmar a resposta HTTP após a publicação.
+- **Correção:** headers declarados em `vercel.json`.
+- **Status:** corrigida e confirmada em produção.
 
 ### SEC-02 — Dependência externa de fonte
 
@@ -73,5 +73,5 @@ de permissões. A presença desses headers deve ser confirmada após o deploy.
 
 ## Decisão final
 
-**Deploy liberado.** ORION deve bloquear o encerramento do gate se os headers
-configurados não estiverem presentes na resposta de produção.
+**Produção aprovada.** Os headers configurados estão presentes na resposta da
+URL oficial e não existem vulnerabilidades críticas ou altas abertas.
