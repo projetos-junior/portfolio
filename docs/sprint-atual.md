@@ -36,7 +36,7 @@
 | T12 | Auditar e endurecer segurança | SENTINEL | Concluída |
 | T13 | Atualizar relatórios e runbook | ORION/DEPLOY | Concluída |
 | T14 | Publicar e executar smoke test | DEPLOY/VALE | Concluída |
-| T15 | Validar métricas dos cases | Usuário/VERA | Backlog não bloqueante |
+| T15 | Definir abordagem de evidências dos cases | Usuário/VERA | Concluída — sem métricas |
 
 ## Riscos ativos
 
@@ -44,7 +44,7 @@
 |---|---|---|
 | Deploy automático não acompanhar `main` | Alto | Comparar produção com o commit |
 | LCP variar acima de 2,5 s | Médio | Medir novamente na produção |
-| Cases sem métricas publicáveis | Médio | Validar sem inventar resultados |
+| Cases sem métricas publicáveis | Baixo | Usar evidências qualitativas reais |
 
 ## Sprint anterior
 

@@ -90,12 +90,9 @@ http://localhost:4173
 
 ## `Publicação`
 
-O projeto está pronto para publicação estática. Antes do deploy final, a
-recomendação é:
-
-1. Validar se existem métricas publicáveis para enriquecer os cases.
-2. Confirmar os links finais de contato.
-3. Escolher o alvo de publicação.
+O projeto está publicado em `https://edson-junior-qa.vercel.app/`. Os cases
+usam evidências qualitativas baseadas no currículo e não exibem métricas
+numéricas sem validação.
 
 ## `Observações`
 

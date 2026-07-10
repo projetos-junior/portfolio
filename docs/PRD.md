@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.5 | **Status:** Planejamento inicial concluído
+> **Versão:** 1.6 | **Status:** MVP publicado
 
 ---
 
@@ -17,6 +17,7 @@
 | 1.3 | 2026-07-06 | Codex + VERA | Criação da copy inicial da home e estrutura de contatos |
 | 1.4 | 2026-07-06 | Codex + VERA | Definição do e-mail final para contato no portfólio |
 | 1.5 | 2026-07-06 | Codex + VERA | Definição do CTA principal para abertura direta no WhatsApp |
+| 1.6 | 2026-07-10 | VERA + usuário | Decisão de publicar os cases sem métricas numéricas |
 
 ---
 
@@ -140,7 +141,7 @@ Não entram no MVP blog, CMS, área administrativa, autenticação, dashboard, f
 |----|---------------|-----------|--------------|
 | F08 | Menu com scroll suave | Navegação entre seções | F01 a F07 |
 | F09 | Download de currículo | Acesso rápido ao CV em PDF | Arquivo real disponível |
-| F10 | Métricas de confiança | Anos de experiência, projetos, ferramentas ou resultados resumidos | Conteúdo validado |
+| F10 | Métricas de confiança | Fora do MVP por decisão de conteúdo; não há números publicáveis validados | Conteúdo validado |
 
 ### Could-have (desejável, versões futuras)
 | ID | Funcionalidade | Descrição |
@@ -255,8 +256,8 @@ Futuro
 - [ ] Dado o conteúdo confirmado do currículo, quando a seção for exibida, então deve contemplar ao menos testes manuais, APIs, rastreabilidade e atuação em bots/URA.
 
 ### F04 — Projetos/cases
-- [ ] Dado o acesso aos projetos, quando o visitante abrir ou ler cada item, então deve entender contexto, contribuição e impacto.
-- [ ] Dado o currículo atual, quando os primeiros cases forem montados, então eles devem partir de experiências reais na Intervalor/GRB (Mutant) e contextos compatíveis com o histórico profissional.
+- [x] Dado o acesso aos projetos, quando o visitante abrir ou ler cada item, então deve entender contexto, contribuição e impacto.
+- [x] Dado o currículo atual, quando os primeiros cases forem montados, então eles devem partir de experiências reais na Intervalor/GRB (Mutant) e contextos compatíveis com o histórico profissional.
 
 ### F06 — Contato
 - [ ] Dado o interesse do visitante, quando ele acionar um CTA, então deve conseguir iniciar contato sem fluxo intermediário confuso.
@@ -271,7 +272,7 @@ Futuro
 
 | ID | Risco / Hipótese | Probabilidade | Impacto | Mitigação | Status |
 |----|-----------------|---------------|---------|-----------|--------|
-| R01 | Falta de conteúdo concreto para os projetos/cases enfraquecer a narrativa | Média | Alto | Estruturar cases curtos com problema, ação e resultado a partir das experiências já confirmadas no currículo | Aberto |
+| R01 | Falta de métricas publicáveis para os cases | Média | Médio | Usar contexto, atuação, cobertura e valor qualitativo verificáveis, sem inventar números | Aceito |
 | R02 | Excesso de inspiração de portfólios de designers desalinhar com posicionamento de QA | Média | Médio | Adaptar a estética sem copiar estrutura literal | Aberto |
 | H01 | Uma página única bem estruturada será suficiente para conversão inicial | Alta | Médio | Validar com uso em processos seletivos | Aberto |
 | H02 | O uso da foto profissional aumentará percepção de confiança e memorabilidade | Alta | Médio | Testar em feedback informal com recrutadores/colegas | Aberto |
@@ -287,6 +288,7 @@ Futuro
 | 2026-07-06 | O portfólio destacará QA como diferencial estratégico, não só lista de ferramentas | Melhor posicionamento profissional | VERA |
 | 2026-07-06 | O MVP do frontend será implementado com HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Manter simplicidade, controle e baixo acoplamento tecnológico | VERA |
 | 2026-07-06 | O currículo enviado passa a ser a base factual inicial do conteúdo do portfólio | Reduz suposições e aumenta consistência | VERA |
+| 2026-07-10 | Os cases do MVP não usarão métricas numéricas | Não existem números publicáveis validados; a narrativa usará evidências qualitativas reais | VERA + usuário |
 
 ---
 
@@ -358,5 +360,6 @@ Se você busca um profissional de QA com olhar analítico, atenção aos detalhe
 - **E-mail:** `edson.junior.qa@gmail.com`
 
 ### 15.10 Pendências de conteúdo
-- Validar se o telefone será exibido publicamente ou apenas via WhatsApp.
-- Refinar os mini-cases com resultados mensuráveis, se puder publicar.
+- O telefone é exibido publicamente e direciona para o WhatsApp.
+- Nenhuma métrica será publicada no MVP. Os cases usam evidências qualitativas
+  compatíveis com o currículo e não atribuem resultados numéricos não validados.

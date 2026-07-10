@@ -34,8 +34,7 @@
 
 | ID | Descrição | Responsável |
 |---|---|---|
-| B01 | Validar métricas publicáveis para os cases | Usuário/VERA |
-| B02 | Avaliar divisão futura do HTML com processo de build mínimo | ORION/FORGE |
+| B01 | Avaliar divisão futura do HTML com processo de build mínimo | ORION/FORGE |
 
 ## Métricas do gate local
 
@@ -56,3 +55,4 @@
 - Usar WebP para entrega e preservar os PNGs como fontes originais.
 - Hospedar Maven Pro na mesma origem para reduzir latência e dependência externa.
 - Bloquear o encerramento do gate até confirmar headers e paridade do deploy.
+- Publicar os cases sem métricas, usando apenas evidências qualitativas reais.
