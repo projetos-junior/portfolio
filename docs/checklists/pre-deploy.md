@@ -1,8 +1,8 @@
-# Checklist de pré-deploy — Release candidate 1
+# Checklist de pré-deploy — Release candidate 2
 
-> **Responsável:** DEPLOY + SENTINEL
+> **Responsável:** DEPLOY + VALE + SHIELD
 > **Ambiente:** Produção
-> **Data:** 2026-07-10
+> **Data:** 2026-07-15
 > **Security Score:** 95/100
 
 ## Bloqueantes
@@ -18,9 +18,9 @@
 - [x] Branch local sem conflitos.
 - [x] Nenhum `console.log` ou log sensível no frontend.
 - [x] Validação local sem erro de console ou rede.
-- [x] Commits aprovados enviados para `origin/main`.
-- [x] Deploy automático concluído.
-- [x] Headers defensivos confirmados em produção.
+- [ ] Commits aprovados enviados para `origin/main`.
+- [ ] Deploy automático concluído.
+- [ ] Headers defensivos confirmados na nova release em produção.
 
 ## Itens importantes
 
@@ -32,15 +32,16 @@
 
 ## Smoke test pós-deploy
 
-- [x] Home e assets retornam HTTP 200.
-- [x] Menu desktop e mobile funcionam.
-- [x] `Escape` fecha o menu e devolve o foco.
-- [x] Âncoras e CTAs funcionam.
-- [x] Currículo responde como PDF.
-- [x] Console e rede não apresentam erro.
-- [x] CSP e demais headers estão presentes.
-- [x] Conteúdo publicado corresponde ao commit aprovado.
+- [ ] Home e assets retornam HTTP 200.
+- [ ] Menu desktop e mobile funcionam.
+- [ ] `Escape` fecha o menu e devolve o foco.
+- [ ] Âncoras e CTAs funcionam.
+- [ ] Currículo responde como PDF.
+- [ ] Console e rede não apresentam erro.
+- [ ] CSP e demais headers estão presentes.
+- [ ] Conteúdo publicado corresponde ao commit aprovado.
 
 ## Resultado
 
-**Deploy aprovado e concluído.** O smoke test de produção passou em 2026-07-10.
+**Pré-deploy aprovado.** A release aguarda push, deploy automático e smoke test
+de produção. A versão anterior permanece aprovada até a conclusão desta etapa.
