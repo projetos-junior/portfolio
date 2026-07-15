@@ -1,7 +1,7 @@
 # Andamento do projeto
 
 > **Atualizado por:** ORION
-> **Última atualização:** 2026-07-10
+> **Última atualização:** 2026-07-15
 
 ## Status geral
 
@@ -29,6 +29,12 @@
 | ID | Descrição | Agente | Critério de conclusão |
 |---|---|---|---|
 | T14 | Sincronizar Vercel e executar smoke test | DEPLOY/VALE | Concluída em 2026-07-10 |
+
+## Manutenção documental
+
+| Data | Descrição | Evidência |
+|---|---|---|
+| 2026-07-15 | Briefing inicial regularizado retrospectivamente com base no PRD v1.6 e autorização do usuário | `docs/briefing.md` |
 
 ## Backlog não bloqueante
 
