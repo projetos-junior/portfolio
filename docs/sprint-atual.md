@@ -8,8 +8,8 @@
 | Campo | Valor |
 |---|---|
 | Nome | Sprint 3 — Sincronização documental e manutenção |
-| Objetivo | Alinhar a documentação ao estado publicado e preparar, sem executar, uma possível modularização do frontend |
-| Status | Concluída após correção pré-deploy |
+| Objetivo | Alinhar a documentação, modularizar o CSS, corrigir o overflow horizontal e publicar a release validada |
+| Status | Concluída e publicada em produção |
 | Início | 2026-07-15 |
 | Encerramento | 2026-07-15 |
 | Reabertura | 2026-07-15 |
@@ -42,6 +42,7 @@ FORGE → VALE → SHIELD
 - [x] Nenhum código de frontend foi alterado durante a Fase A.
 - [x] A modularização foi aprovada exclusivamente para CSS.
 - [x] FORGE, VALE e SHIELD concluíram suas etapas em sequência.
+- [x] Release publicada e smoke test de produção aprovado.
 - [x] Git termina limpo, com commits semânticos e focados por camada.
 
 ## Tasks
@@ -58,6 +59,7 @@ FORGE → VALE → SHIELD
 | T23 | B | Remover rolagem horizontal preservando elementos full-bleed | FORGE | Frontend | Concluída |
 | T24 | B | Executar regressão visual e responsiva do ajuste | VALE | QA | Concluída |
 | T25 | B | Revisar impacto de segurança do ajuste CSS | SHIELD | Segurança | Concluída |
+| T26 | C | Publicar release e executar smoke test de produção | DEPLOY/VALE | Produção | Concluída |
 
 ## Riscos e respostas
 

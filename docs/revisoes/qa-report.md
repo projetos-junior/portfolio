@@ -1,8 +1,8 @@
 # Relatório de QA — Landing page
 
 > **Produzido por:** VALE
-> **Versão:** 1.2
-> **Status:** Release CSS e correção de overflow aprovadas para deploy
+> **Versão:** 1.3
+> **Status:** Release CSS aprovada em produção
 > **Data:** 2026-07-15
 
 ## Sumário executivo
@@ -15,7 +15,7 @@
 | Passou | 23 |
 | Falhou | 0 |
 | Bloqueado | 0 |
-| Status geral | Aprovado para deploy |
+| Status geral | Aprovado em produção |
 
 O baseline encontrou LCP de 22,5 segundos, imagens com 3,84 MiB, ausência de
 favicon e divergência entre texto visível e nome acessível da marca. Após as
@@ -134,5 +134,5 @@ Cenário: Impedir deslocamento horizontal em viewport com barra vertical
 
 ## Decisão final
 
-**Aprovado para deploy.** A produção anterior permanece aprovada; a versão com
-CSS modularizado requer publicação e smoke test para nova confirmação em produção.
+**Aprovado em produção.** A release candidate 2 passou no smoke test em
+2026-07-15 com Lighthouse 100/100/100/100, LCP de 1.217 ms, CLS 0 e TBT 0.

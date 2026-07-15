@@ -18,9 +18,9 @@
 - [x] Branch local sem conflitos.
 - [x] Nenhum `console.log` ou log sensível no frontend.
 - [x] Validação local sem erro de console ou rede.
-- [ ] Commits aprovados enviados para `origin/main`.
-- [ ] Deploy automático concluído.
-- [ ] Headers defensivos confirmados na nova release em produção.
+- [x] Commits aprovados enviados para `origin/main`.
+- [x] Deploy automático concluído.
+- [x] Headers defensivos confirmados na nova release em produção.
 
 ## Itens importantes
 
@@ -32,16 +32,16 @@
 
 ## Smoke test pós-deploy
 
-- [ ] Home e assets retornam HTTP 200.
-- [ ] Menu desktop e mobile funcionam.
-- [ ] `Escape` fecha o menu e devolve o foco.
-- [ ] Âncoras e CTAs funcionam.
-- [ ] Currículo responde como PDF.
-- [ ] Console e rede não apresentam erro.
-- [ ] CSP e demais headers estão presentes.
-- [ ] Conteúdo publicado corresponde ao commit aprovado.
+- [x] Home e assets retornam HTTP 200.
+- [x] Menu desktop e mobile funcionam.
+- [x] `Escape` fecha o menu e devolve o foco.
+- [x] Âncoras e CTAs funcionam.
+- [x] Currículo responde como PDF.
+- [x] Console e rede não apresentam erro.
+- [x] CSP e demais headers estão presentes.
+- [x] Conteúdo publicado corresponde ao commit aprovado.
 
 ## Resultado
 
-**Pré-deploy aprovado.** A release aguarda push, deploy automático e smoke test
-de produção. A versão anterior permanece aprovada até a conclusão desta etapa.
+**Deploy aprovado e concluído.** A release candidate 2 foi publicada e passou
+no smoke test de produção em 2026-07-15.

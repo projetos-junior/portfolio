@@ -1,8 +1,8 @@
 # Relatório de segurança — Frontend estático
 
 > **Produzido por:** SENTINEL + SHIELD
-> **Versão:** 1.2
-> **Status:** SHIELD aprovou a release CSS e a correção de overflow para deploy
+> **Versão:** 1.3
+> **Status:** Release CSS aprovada em produção
 > **Data:** 2026-07-15
 
 ## Identificação
@@ -12,7 +12,7 @@
 | Tipo | Frontend audit e revisão incremental SHIELD |
 | Escopo | HTML, CSS modularizado, correção de overflow, assets, histórico Git e Vercel |
 | Security Score | 95/100 |
-| Decisão | Liberado para deploy; requer smoke test de produção |
+| Decisão | Liberado e confirmado em produção |
 
 ## Sumário executivo
 
@@ -35,7 +35,7 @@ de permissões. Esses headers foram confirmados na resposta de produção.
 - Todas as treze folhas CSS responderam sem erro no teste local.
 
 **Resultado incremental:** aprovado sem novo achado. O Security Score permanece
-95/100; a confirmação de headers da nova release deve ocorrer após o deploy.
+95/100; os headers da nova release foram confirmados em produção.
 
 ## Revisão incremental SHIELD — overflow horizontal
 
@@ -94,5 +94,6 @@ de permissões. Esses headers foram confirmados na resposta de produção.
 
 ## Decisão final
 
-**Deploy aprovado.** Não existem vulnerabilidades críticas ou altas abertas.
-A produção atual permanece segura; a nova release exige smoke test dos headers.
+**Produção aprovada.** Não existem vulnerabilidades críticas ou altas abertas.
+CSP, HSTS, `nosniff`, proteção contra framing, políticas de referrer e permissões
+foram confirmados na release candidate 2 em 2026-07-15.

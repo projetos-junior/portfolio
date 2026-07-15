@@ -1,8 +1,8 @@
 # Runbook — Portfólio QA
 
 > **Responsável:** DEPLOY
-> **Versão:** 1.0
-> **Atualizado:** 2026-07-10
+> **Versão:** 1.1
+> **Atualizado:** 2026-07-15
 
 ## Arquitetura
 
@@ -23,6 +23,15 @@ Navegador → Vercel CDN → frontend/index.html e assets
 | Repositório | `https://github.com/projetos-junior/portfolio` |
 | Branch de produção | `main` |
 | Diretório publicado | `frontend` |
+
+## Release atual
+
+| Campo | Valor |
+|---|---|
+| Release | Candidate 2 — modularização CSS e correção de overflow |
+| Commit funcional publicado | `a2d058e` |
+| Data | 2026-07-15 |
+| Smoke test | Aprovado em produção |
 
 ## Execução local
 

@@ -7,10 +7,10 @@
 
 | Campo | Valor |
 |---|---|
-| Fase atual | Sprint 3 concluída; release CSS aguardando publicação |
+| Fase atual | Release CSS publicada e validada em produção |
 | Sprint atual | Sprint 3 — Sincronização documental e manutenção |
 | Progresso geral | 100% do MVP |
-| Gate | Produção anterior aprovada; release atual aprovada localmente |
+| Gate | Aprovado em produção |
 | Responsável | ORION |
 
 ## Entregas concluídas
@@ -32,20 +32,22 @@
 | T23 | Correção da rolagem horizontal | FORGE | `frontend/assets/styles/base.css` |
 | T24 | Regressão visual e responsiva | VALE | `docs/revisoes/qa-report.md` v1.2 |
 | T25 | Revisão de segurança da correção | SHIELD | `docs/revisoes/security-report.md` v1.2 |
+| T26 | Publicação e smoke test da release CSS | DEPLOY/VALE | Produção aprovada em 2026-07-15 |
 
 ## Última entrega
 
 | ID | Descrição | Agente | Critério de conclusão |
 |---|---|---|---|
-| T25 | Revisar segurança da correção de overflow | SHIELD | Aprovada localmente em 2026-07-15; deploy pendente |
+| T26 | Publicar e executar smoke test da release CSS | DEPLOY/VALE | Concluída em produção em 2026-07-15 |
 
 ## Trabalho atual
 
 | ID | Descrição | Agente | Status |
 |---|---|---|---|
 | T16–T19 | Sincronizar PRD, design, spec e andamento com o estado publicado | ORION e agentes documentais | Concluído |
-| T20–T22 | Modularizar o CSS, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Concluído localmente; deploy pendente |
-| T23–T25 | Corrigir overflow horizontal e revalidar a release | FORGE → VALE → SHIELD | Concluído localmente; deploy pendente |
+| T20–T22 | Modularizar o CSS, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Concluído e publicado |
+| T23–T25 | Corrigir overflow horizontal e revalidar a release | FORGE → VALE → SHIELD | Concluído e publicado |
+| T26 | Publicar release e executar smoke test | DEPLOY/VALE | Concluído em produção |
 
 ## Manutenção documental
 
@@ -54,6 +56,7 @@
 | 2026-07-15 | Briefing inicial regularizado retrospectivamente com base no PRD v1.6 e autorização do usuário | `docs/briefing.md` |
 | 2026-07-15 | Sprint 3 concluída com documentação sincronizada, CSS modularizado e gates VALE/SHIELD aprovados | `docs/sprint-atual.md` |
 | 2026-07-15 | Overflow horizontal corrigido e release revalidada antes da publicação | Relatórios QA e segurança v1.2 |
+| 2026-07-15 | Release candidate 2 publicada e aprovada em produção | Checklist de pré-deploy e runbook |
 
 ## Backlog não bloqueante
 
@@ -61,15 +64,15 @@
 |---|---|---|
 | B01 | Avaliar divisão futura do HTML com processo de build mínimo | Adiado; HTML permanece único por decisão da Sprint 3 |
 
-## Métricas do gate local
+## Métricas do gate
 
 | Métrica | Baseline | Produção atual | Release local |
 |---|---:|---:|---:|
-| Lighthouse performance | 71 | 98 | 99 |
+| Lighthouse performance | 71 | 100 | 99 |
 | Acessibilidade | 100 | 100 | 100 |
 | Boas práticas | 96 | 100 | 100 |
 | SEO | 100 | 100 | 100 |
-| LCP | 22.509 ms | 1.360 ms | 1.966 ms |
+| LCP | 22.509 ms | 1.217 ms | 1.966 ms |
 | Console | 1 erro | 0 erros | 0 erros |
 
 ## Decisões
