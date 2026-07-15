@@ -9,9 +9,10 @@
 |---|---|
 | Nome | Sprint 3 — Sincronização documental e manutenção |
 | Objetivo | Alinhar a documentação ao estado publicado e preparar, sem executar, uma possível modularização do frontend |
-| Status | Concluída |
+| Status | Reaberta para correção pré-deploy |
 | Início | 2026-07-15 |
 | Encerramento | 2026-07-15 |
+| Reabertura | 2026-07-15 |
 | Responsável | ORION |
 
 ## Escopo autorizado — Fase A
@@ -54,6 +55,9 @@ FORGE → VALE → SHIELD
 | T20 | B | Especificar e implementar modularização do CSS | FORGE | Frontend | Concluída |
 | T21 | B | Executar regressão completa da modularização | VALE | QA | Concluída |
 | T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Concluída |
+| T23 | B | Remover rolagem horizontal preservando elementos full-bleed | FORGE | Frontend | Em andamento |
+| T24 | B | Executar regressão visual e responsiva do ajuste | VALE | QA | Bloqueada por T23 |
+| T25 | B | Revisar impacto de segurança do ajuste CSS | SHIELD | Segurança | Bloqueada por T24 |
 
 ## Riscos e respostas
 

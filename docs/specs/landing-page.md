@@ -127,6 +127,27 @@ Falhas em serviços externos não devem impedir a leitura do conteúdo principal
 | Links externos mudarem | Quebra ações de conversão | Verificar antes de cada release |
 | Deploy não acompanhar `main` | Produção fica divergente | Comparar commit e smoke test no deploy |
 
+## Correção pré-deploy — overflow horizontal
+
+> **Autorizada pelo usuário:** 2026-07-15
+
+Elementos full-bleed usam `100vw` para alcançar as bordas da viewport. Em
+navegadores cuja barra vertical ocupa espaço no layout, essa unidade pode ficar
+maior que a área útil e gerar rolagem horizontal. O halo decorativo do retrato
+também ultrapassa visualmente a caixa em telas menores, de forma intencional.
+
+A correção aplica `overflow-x: clip` ao `body`, preservando o full-bleed e as
+decorações sem criar um contêiner de rolagem horizontal. Não serão alterados
+larguras, grid, HTML, conteúdo ou comportamento do menu.
+
+### Critérios de aceite incrementais
+
+- [ ] Não existe deslocamento horizontal entre 320 e 1440 pixels.
+- [ ] Header, faixa de provas e halo preservam o layout atual.
+- [ ] Rolagem vertical e comportamento sticky continuam funcionais.
+- [ ] Console e rede permanecem sem erros.
+- [ ] Lighthouse mantém as metas do PRD.
+
 ## Critério de conclusão
 
 - [x] F01 a F09 possuem implementação identificável.

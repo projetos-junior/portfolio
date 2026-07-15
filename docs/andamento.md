@@ -7,7 +7,7 @@
 
 | Campo | Valor |
 |---|---|
-| Fase atual | Sprint 3 concluída; aguardando publicação da manutenção CSS |
+| Fase atual | Correção pré-deploy de overflow horizontal |
 | Sprint atual | Sprint 3 — Sincronização documental e manutenção |
 | Progresso geral | 100% do MVP |
 | Gate | Aprovado em produção |
@@ -42,6 +42,7 @@
 |---|---|---|---|
 | T16–T19 | Sincronizar PRD, design, spec e andamento com o estado publicado | ORION e agentes documentais | Concluído |
 | T20–T22 | Modularizar o CSS, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Concluído localmente; deploy pendente |
+| T23–T25 | Corrigir overflow horizontal e revalidar a release | FORGE → VALE → SHIELD | Em andamento |
 
 ## Manutenção documental
 
