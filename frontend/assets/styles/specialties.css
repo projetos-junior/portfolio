@@ -1,0 +1,32 @@
+.specialties__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.specialty {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(44, 45, 78, 0.9);
+  min-height: 15rem;
+}
+
+.specialty h3,
+.case-card h3,
+.toolkit__grid h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.specialty--tall {
+  grid-row: span 2;
+  background: linear-gradient(180deg, rgba(0, 228, 161, 0.12), rgba(44, 45, 78, 0.92));
+}
+
+.specialty--wide {
+  grid-column: span 2;
+}

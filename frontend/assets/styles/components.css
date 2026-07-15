@@ -1,0 +1,110 @@
+.section-heading {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 44rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.section-heading h2,
+.hero h1,
+.contact__intro h2 {
+  margin: 0;
+  line-height: 0.98;
+  font-size: clamp(2.2rem, 7vw, 4.6rem);
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.35rem;
+  padding: 0 1.35rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible,
+.icon-link:focus-visible,
+.menu-toggle:focus-visible,
+.contact__panel a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(184, 255, 231, 0.2);
+}
+
+.button--primary {
+  background: var(--primary);
+  color: var(--surface-3);
+  font-weight: 800;
+}
+
+.button--ghost {
+  border-color: var(--border);
+  color: var(--text);
+  background: rgba(52, 53, 91, 0.48);
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 3.35rem;
+  height: 3.35rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(52, 53, 91, 0.48);
+  color: var(--text-soft);
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color var(--transition),
+    color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+.icon-link:hover {
+  transform: translateY(-2px);
+  color: var(--text);
+  border-color: rgba(0, 228, 161, 0.4);
+  background: rgba(0, 228, 161, 0.12);
+}
+
+.icon-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-link--labelled {
+  width: auto;
+  padding-inline: 1rem 1.15rem;
+  grid-auto-flow: column;
+  gap: 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+.icon-link--labelled span {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.icon-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: rgba(0, 228, 161, 0.12);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
