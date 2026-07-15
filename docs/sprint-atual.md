@@ -1,52 +1,75 @@
 # Sprint atual
 
 > **Gerenciada por:** ORION
-> **Atualizada em:** 2026-07-10
+> **Atualizada em:** 2026-07-15
 
 ## Identificação
 
 | Campo | Valor |
 |---|---|
-| Nome | Sprint 2 — Hardening, evidências e publicação |
-| Objetivo | Fechar o gate técnico e sincronizar a release na Vercel |
-| Status | Concluída |
-| Início | 2026-07-10 |
-| Fim previsto | 2026-07-12 |
+| Nome | Sprint 3 — Sincronização documental e manutenção |
+| Objetivo | Alinhar a documentação ao estado publicado e preparar, sem executar, uma possível modularização do frontend |
+| Status | Em andamento |
+| Início | 2026-07-15 |
+| Fim previsto | 2026-07-17 |
 | Responsável | ORION |
+
+## Escopo autorizado — Fase A
+
+- Sincronizar os critérios de aceite do PRD com as evidências aprovadas pelo QA.
+- Atualizar o status do design system e remover referências visuais ou tipográficas superadas.
+- Corrigir a spec `as built` para refletir a árvore real de assets e os três cases publicados.
+- Manter código, layout, conteúdo público e configuração de produção inalterados.
+
+## Escopo condicional — Fase B
+
+A modularização do frontend **não está autorizada nesta abertura de sprint**. Se o
+usuário aprovar explicitamente, a execução seguirá obrigatoriamente esta ordem:
+
+```text
+FORGE → VALE → SHIELD
+```
+
+- **FORGE:** criar ou atualizar a spec técnica e modularizar sem introduzir nova tecnologia desnecessária.
+- **VALE:** executar regressão funcional, responsiva, por teclado e de performance.
+- **SHIELD:** executar Frontend Security Audit após a aprovação do QA.
 
 ## Critérios de sucesso
 
-- [x] Spec técnica `as built` criada.
-- [x] QA funcional, mobile e por teclado executado.
-- [x] Lighthouse local registrado.
-- [x] Imagens críticas otimizadas.
-- [x] Auditoria de segurança concluída.
-- [x] Headers defensivos configurados.
-- [x] Runbook e `.env.example` atualizados.
-- [x] Deploy corresponde ao commit aprovado.
-- [x] Smoke test de produção aprovado.
+- [ ] PRD, DESIGN, spec, QA e andamento descrevem o mesmo estado do produto.
+- [ ] Nenhuma informação factual ou métrica é adicionada sem evidência.
+- [ ] Nenhum código de frontend é alterado durante a Fase A.
+- [ ] A decisão sobre modularização fica registrada como aprovada ou adiada.
+- [ ] Se a Fase B for aprovada, FORGE, VALE e SHIELD concluem suas etapas em sequência.
+- [ ] Git termina limpo, com commits semânticos e focados por camada.
 
 ## Tasks
 
-| ID | Task | Agente | Status |
-|---|---|---|---|
-| T09 | Documentar spec da landing page | FORGE | Concluída |
-| T10 | Executar QA e Lighthouse | VALE | Concluída |
-| T11 | Otimizar mídia e interação mobile | FORGE | Concluída |
-| T12 | Auditar e endurecer segurança | SENTINEL | Concluída |
-| T13 | Atualizar relatórios e runbook | ORION/DEPLOY | Concluída |
-| T14 | Publicar e executar smoke test | DEPLOY/VALE | Concluída |
-| T15 | Definir abordagem de evidências dos cases | Usuário/VERA | Concluída — sem métricas |
+| ID | Fase | Task | Agente | Camada | Status |
+|---|---|---|---|---|---|
+| T16 | A | Sincronizar critérios de aceite do PRD com o QA aprovado | VERA | Documentação | Pendente |
+| T17 | A | Atualizar estado do design system e referências superadas | LUMI | Documentação | Pendente |
+| T18 | A | Corrigir a spec técnica conforme a implementação `as built` | FORGE | Documentação | Pendente |
+| T19 | A | Revisar consistência final e registrar decisão de manutenção | ORION | Documentação | Pendente |
+| T20 | B | Especificar e implementar modularização do frontend | FORGE | Frontend | Bloqueada — requer autorização do usuário |
+| T21 | B | Executar regressão completa da modularização | VALE | QA | Bloqueada por T20 |
+| T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Bloqueada por T21 |
 
-## Riscos ativos
+## Riscos e respostas
 
 | Risco | Impacto | Resposta |
 |---|---|---|
-| Deploy automático não acompanhar `main` | Alto | Comparar produção com o commit |
-| LCP variar acima de 2,5 s | Médio | Medir novamente na produção |
-| Cases sem métricas publicáveis | Baixo | Usar evidências qualitativas reais |
+| Documentação continuar divergente do código | Médio | Concluir T16–T19 antes de qualquer manutenção técnica |
+| Modularização alterar comportamento ou performance | Alto | Exigir spec, regressão VALE e revisão SHIELD |
+| Introdução de processo de build desnecessário | Médio | Priorizar a pilha atual e exigir aprovação para nova tecnologia |
+| Mistura de documentação e frontend no mesmo commit | Médio | Separar commits por camada e responsabilidade |
+
+## Critério de encerramento
+
+A Sprint 3 pode ser encerrada após T16–T19 se a modularização for adiada. Se a
+Fase B for autorizada, o encerramento exige também T20–T22 concluídas e aprovadas.
 
 ## Sprint anterior
 
-A Sprint 1 — Estratégia e base visual foi encerrada em 2026-07-10 com PRD,
-design system, conteúdo e implementação do MVP concluídos.
+A Sprint 2 — Hardening, evidências e publicação foi encerrada em 2026-07-10 com
+QA, auditoria de segurança, deploy e smoke test de produção aprovados.

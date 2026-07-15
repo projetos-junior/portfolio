@@ -7,8 +7,8 @@
 
 | Campo | Valor |
 |---|---|
-| Fase atual | MVP publicado e validado em produção |
-| Sprint atual | Sprint 2 — Hardening, evidências e publicação |
+| Fase atual | Manutenção pós-MVP e sincronização documental |
+| Sprint atual | Sprint 3 — Sincronização documental e manutenção |
 | Progresso geral | 100% do MVP |
 | Gate | Aprovado em produção |
 | Responsável | ORION |
@@ -30,6 +30,13 @@
 |---|---|---|---|
 | T14 | Sincronizar Vercel e executar smoke test | DEPLOY/VALE | Concluída em 2026-07-10 |
 
+## Trabalho atual
+
+| ID | Descrição | Agente | Status |
+|---|---|---|---|
+| T16–T19 | Sincronizar PRD, design, spec e andamento com o estado publicado | ORION e agentes documentais | Em andamento |
+| T20–T22 | Modularizar, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Bloqueado até autorização explícita do usuário |
+
 ## Manutenção documental
 
 | Data | Descrição | Evidência |
@@ -40,7 +47,7 @@
 
 | ID | Descrição | Responsável |
 |---|---|---|
-| B01 | Avaliar divisão futura do HTML com processo de build mínimo | ORION/FORGE |
+| B01 | Avaliar divisão futura do HTML com processo de build mínimo | Incorporado à decisão condicional da Sprint 3 |
 
 ## Métricas do gate local
 
@@ -62,3 +69,5 @@
 - Hospedar Maven Pro na mesma origem para reduzir latência e dependência externa.
 - Bloquear o encerramento do gate até confirmar headers e paridade do deploy.
 - Publicar os cases sem métricas, usando apenas evidências qualitativas reais.
+- Não iniciar a modularização do frontend sem autorização explícita do usuário.
+- Se autorizada, executar a manutenção na ordem FORGE → VALE → SHIELD.
