@@ -35,7 +35,7 @@
 | ID | Descrição | Agente | Status |
 |---|---|---|---|
 | T16–T19 | Sincronizar PRD, design, spec e andamento com o estado publicado | ORION e agentes documentais | Em andamento |
-| T20–T22 | Modularizar, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Bloqueado até autorização explícita do usuário |
+| T20–T22 | Modularizar o CSS, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Em andamento — CSS autorizado em 2026-07-15 |
 
 ## Manutenção documental
 
@@ -71,3 +71,4 @@
 - Publicar os cases sem métricas, usando apenas evidências qualitativas reais.
 - Não iniciar a modularização do frontend sem autorização explícita do usuário.
 - Se autorizada, executar a manutenção na ordem FORGE → VALE → SHIELD.
+- Restringir a modularização autorizada ao CSS, mantendo o HTML único e sem processo de build.

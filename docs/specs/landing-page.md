@@ -1,8 +1,8 @@
 # Spec técnica — Landing page do portfólio
 
 > **Agente:** FORGE  
-> **Versão:** 1.0  
-> **Status:** Implementada — documentação `as built`  
+> **Versão:** 1.1
+> **Status:** Modularização CSS aprovada para implementação
 > **Requisitos:** F01 a F09 do `docs/PRD.md`
 
 ## Contexto
@@ -19,22 +19,44 @@ frontend/
 ├─ index.html
 └─ assets/
    ├─ docs/cv-edson-junior-qa.pdf
+   ├─ fonts/maven-pro-latin.woff2
    ├─ images/
+   │  ├─ favicon.svg
    │  ├─ foto1.png
-   │  └─ foto2.png
+   │  ├─ foto1.webp
+   │  ├─ foto2.png
+   │  └─ foto2.webp
    ├─ js/main.js
    └─ styles/
       ├─ tokens.css
       ├─ base.css
-      └─ sections.css
+      ├─ navigation.css
+      ├─ components.css
+      ├─ motion.css
+      ├─ hero.css
+      ├─ hero-motion.css
+      ├─ about.css
+      ├─ specialties.css
+      ├─ cases.css
+      ├─ toolkit.css
+      ├─ contact.css
+      └─ responsive.css
 ```
 
 - `frontend/index.html` contém a estrutura semântica, o conteúdo e os links.
 - `frontend/assets/styles/tokens.css` define os tokens do design system.
-- `frontend/assets/styles/base.css` contém reset, tipografia e componentes base.
-- `frontend/assets/styles/sections.css` contém layout e estilos das seções.
+- `frontend/assets/styles/base.css` contém fonte, reset e fundações globais.
+- `navigation.css`, `components.css` e `motion.css` isolam responsabilidades compartilhadas.
+- Os demais arquivos CSS agrupam estilos por seção e responsividade.
 - `frontend/assets/js/main.js` controla menu, navegação ativa, reveal e movimento.
 - `frontend/assets/` armazena apenas arquivos públicos servidos pelo site.
+
+### Decisão de modularização CSS
+
+A divisão preservará a ordem original das regras para evitar mudanças de cascata
+ou especificidade. O HTML continuará sendo um documento único e não será criado
+processo de build, framework, dependência ou carregamento de conteúdo via
+JavaScript. `sections.css` será removido após a migração integral das regras.
 
 ## Módulos funcionais
 
@@ -43,7 +65,7 @@ frontend/
 | Hero | F01 | Nome, posicionamento, foto, WhatsApp e acesso aos cases |
 | Sobre | F02 | Trajetória, forma de trabalho e diferenciais |
 | Especialidades | F03 | Testes funcionais, API, rastreabilidade, bots e URA |
-| Cases | F04 | Quatro narrativas baseadas na experiência profissional |
+| Cases | F04 | Três narrativas baseadas na experiência profissional |
 | Ferramentas | F05 | Stack agrupada por contexto de uso |
 | Contato | F06 | E-mail, WhatsApp, LinkedIn, GitHub e currículo |
 | Layout adaptativo | F07 | Breakpoints mobile, tablet e desktop |

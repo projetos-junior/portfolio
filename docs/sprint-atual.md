@@ -23,8 +23,8 @@
 
 ## Escopo condicional — Fase B
 
-A modularização do frontend **não está autorizada nesta abertura de sprint**. Se o
-usuário aprovar explicitamente, a execução seguirá obrigatoriamente esta ordem:
+A modularização foi autorizada pelo usuário em 2026-07-15 exclusivamente para o
+CSS. O HTML permanecerá único e a execução seguirá obrigatoriamente esta ordem:
 
 ```text
 FORGE → VALE → SHIELD
@@ -51,7 +51,7 @@ FORGE → VALE → SHIELD
 | T17 | A | Atualizar estado do design system e referências superadas | LUMI | Documentação | Pendente |
 | T18 | A | Corrigir a spec técnica conforme a implementação `as built` | FORGE | Documentação | Pendente |
 | T19 | A | Revisar consistência final e registrar decisão de manutenção | ORION | Documentação | Pendente |
-| T20 | B | Especificar e implementar modularização do frontend | FORGE | Frontend | Bloqueada — requer autorização do usuário |
+| T20 | B | Especificar e implementar modularização do CSS | FORGE | Frontend | Em andamento — autorizada em 2026-07-15 |
 | T21 | B | Executar regressão completa da modularização | VALE | QA | Bloqueada por T20 |
 | T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Bloqueada por T21 |
 
