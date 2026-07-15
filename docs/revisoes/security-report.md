@@ -1,8 +1,8 @@
 # Relatório de segurança — Frontend estático
 
 > **Produzido por:** SENTINEL + SHIELD
-> **Versão:** 1.1
-> **Status:** SHIELD aprovou a modularização CSS para deploy
+> **Versão:** 1.2
+> **Status:** SHIELD aprovou a release CSS e a correção de overflow para deploy
 > **Data:** 2026-07-15
 
 ## Identificação
@@ -10,7 +10,7 @@
 | Campo | Valor |
 |---|---|
 | Tipo | Frontend audit e revisão incremental SHIELD |
-| Escopo | HTML, CSS modularizado, JavaScript, assets, histórico Git e Vercel |
+| Escopo | HTML, CSS modularizado, correção de overflow, assets, histórico Git e Vercel |
 | Security Score | 95/100 |
 | Decisão | Liberado para deploy; requer smoke test de produção |
 
@@ -36,6 +36,15 @@ de permissões. Esses headers foram confirmados na resposta de produção.
 
 **Resultado incremental:** aprovado sem novo achado. O Security Score permanece
 95/100; a confirmação de headers da nova release deve ocorrer após o deploy.
+
+## Revisão incremental SHIELD — overflow horizontal
+
+- A correção adiciona apenas `overflow-x: clip` à fundação global do `body`.
+- Nenhuma URL, dependência, permissão de CSP ou lógica JavaScript foi alterada.
+- Não houve introdução de estilo inline, `@import`, segredo ou entrada de usuário.
+- A contenção evita deslocamento horizontal sem ampliar a superfície de ataque.
+
+**Resultado:** aprovado sem novo achado; Security Score mantido em 95/100.
 
 ## Score por categoria
 

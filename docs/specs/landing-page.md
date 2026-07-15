@@ -142,11 +142,11 @@ larguras, grid, HTML, conteúdo ou comportamento do menu.
 
 ### Critérios de aceite incrementais
 
-- [ ] Não existe deslocamento horizontal entre 320 e 1440 pixels.
-- [ ] Header, faixa de provas e halo preservam o layout atual.
-- [ ] Rolagem vertical e comportamento sticky continuam funcionais.
-- [ ] Console e rede permanecem sem erros.
-- [ ] Lighthouse mantém as metas do PRD.
+- [x] Não existe deslocamento horizontal entre 320 e 1440 pixels.
+- [x] Header, faixa de provas e halo preservam o layout atual.
+- [x] Rolagem vertical e comportamento sticky continuam funcionais.
+- [x] Console e rede permanecem sem erros.
+- [x] Lighthouse mantém as metas do PRD.
 
 ## Critério de conclusão
 

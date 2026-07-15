@@ -7,10 +7,10 @@
 
 | Campo | Valor |
 |---|---|
-| Fase atual | Correção pré-deploy de overflow horizontal |
+| Fase atual | Sprint 3 concluída; release CSS aguardando publicação |
 | Sprint atual | Sprint 3 — Sincronização documental e manutenção |
 | Progresso geral | 100% do MVP |
-| Gate | Aprovado em produção |
+| Gate | Produção anterior aprovada; release atual aprovada localmente |
 | Responsável | ORION |
 
 ## Entregas concluídas
@@ -29,12 +29,15 @@
 | T20 | Modularização do CSS por responsabilidade | FORGE | Commit de frontend e spec v1.1 |
 | T21 | Regressão da modularização | VALE | `docs/revisoes/qa-report.md` v1.1 |
 | T22 | Revisão incremental de segurança | SHIELD | `docs/revisoes/security-report.md` v1.1 |
+| T23 | Correção da rolagem horizontal | FORGE | `frontend/assets/styles/base.css` |
+| T24 | Regressão visual e responsiva | VALE | `docs/revisoes/qa-report.md` v1.2 |
+| T25 | Revisão de segurança da correção | SHIELD | `docs/revisoes/security-report.md` v1.2 |
 
 ## Última entrega
 
 | ID | Descrição | Agente | Critério de conclusão |
 |---|---|---|---|
-| T22 | Revisar segurança da modularização CSS | SHIELD | Aprovada localmente em 2026-07-15; deploy pendente |
+| T25 | Revisar segurança da correção de overflow | SHIELD | Aprovada localmente em 2026-07-15; deploy pendente |
 
 ## Trabalho atual
 
@@ -42,7 +45,7 @@
 |---|---|---|---|
 | T16–T19 | Sincronizar PRD, design, spec e andamento com o estado publicado | ORION e agentes documentais | Concluído |
 | T20–T22 | Modularizar o CSS, validar e revisar segurança do frontend | FORGE → VALE → SHIELD | Concluído localmente; deploy pendente |
-| T23–T25 | Corrigir overflow horizontal e revalidar a release | FORGE → VALE → SHIELD | Em andamento |
+| T23–T25 | Corrigir overflow horizontal e revalidar a release | FORGE → VALE → SHIELD | Concluído localmente; deploy pendente |
 
 ## Manutenção documental
 
@@ -50,6 +53,7 @@
 |---|---|---|
 | 2026-07-15 | Briefing inicial regularizado retrospectivamente com base no PRD v1.6 e autorização do usuário | `docs/briefing.md` |
 | 2026-07-15 | Sprint 3 concluída com documentação sincronizada, CSS modularizado e gates VALE/SHIELD aprovados | `docs/sprint-atual.md` |
+| 2026-07-15 | Overflow horizontal corrigido e release revalidada antes da publicação | Relatórios QA e segurança v1.2 |
 
 ## Backlog não bloqueante
 
@@ -59,14 +63,14 @@
 
 ## Métricas do gate local
 
-| Métrica | Baseline | Após correções |
-|---|---:|---:|
-| Lighthouse performance | 71 | 98 em produção |
-| Acessibilidade | 100 | 100 |
-| Boas práticas | 96 | 100 |
-| SEO | 100 | 100 |
-| LCP | 22.509 ms | 1.360 ms em produção |
-| Console | 1 erro | 0 erros |
+| Métrica | Baseline | Produção atual | Release local |
+|---|---:|---:|---:|
+| Lighthouse performance | 71 | 98 | 99 |
+| Acessibilidade | 100 | 100 | 100 |
+| Boas práticas | 96 | 100 | 100 |
+| SEO | 100 | 100 | 100 |
+| LCP | 22.509 ms | 1.360 ms | 1.966 ms |
+| Console | 1 erro | 0 erros | 0 erros |
 
 ## Decisões
 
@@ -81,3 +85,4 @@
 - Se autorizada, executar a manutenção na ordem FORGE → VALE → SHIELD.
 - Restringir a modularização autorizada ao CSS, mantendo o HTML único e sem processo de build.
 - Modularização CSS aprovada localmente com Lighthouse 99/100/100/100 e Security Score mantido em 95/100.
+- Overflow horizontal contido com `overflow-x: clip`, preservando full-bleed e header sticky.

@@ -9,7 +9,7 @@
 |---|---|
 | Nome | Sprint 3 — Sincronização documental e manutenção |
 | Objetivo | Alinhar a documentação ao estado publicado e preparar, sem executar, uma possível modularização do frontend |
-| Status | Reaberta para correção pré-deploy |
+| Status | Concluída após correção pré-deploy |
 | Início | 2026-07-15 |
 | Encerramento | 2026-07-15 |
 | Reabertura | 2026-07-15 |
@@ -55,9 +55,9 @@ FORGE → VALE → SHIELD
 | T20 | B | Especificar e implementar modularização do CSS | FORGE | Frontend | Concluída |
 | T21 | B | Executar regressão completa da modularização | VALE | QA | Concluída |
 | T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Concluída |
-| T23 | B | Remover rolagem horizontal preservando elementos full-bleed | FORGE | Frontend | Em andamento |
-| T24 | B | Executar regressão visual e responsiva do ajuste | VALE | QA | Bloqueada por T23 |
-| T25 | B | Revisar impacto de segurança do ajuste CSS | SHIELD | Segurança | Bloqueada por T24 |
+| T23 | B | Remover rolagem horizontal preservando elementos full-bleed | FORGE | Frontend | Concluída |
+| T24 | B | Executar regressão visual e responsiva do ajuste | VALE | QA | Concluída |
+| T25 | B | Revisar impacto de segurança do ajuste CSS | SHIELD | Segurança | Concluída |
 
 ## Riscos e respostas
 
@@ -71,7 +71,7 @@ FORGE → VALE → SHIELD
 ## Critério de encerramento
 
 A Sprint 3 pode ser encerrada após T16–T19 se a modularização for adiada. Se a
-Fase B for autorizada, o encerramento exige também T20–T22 concluídas e aprovadas.
+Fase B for autorizada, o encerramento exige também todas as tasks condicionais concluídas e aprovadas.
 
 ## Sprint anterior
 

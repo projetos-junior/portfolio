@@ -1,18 +1,18 @@
 # Relatório de QA — Landing page
 
 > **Produzido por:** VALE
-> **Versão:** 1.1
-> **Status:** Modularização CSS aprovada para deploy
+> **Versão:** 1.2
+> **Status:** Release CSS e correção de overflow aprovadas para deploy
 > **Data:** 2026-07-15
 
 ## Sumário executivo
 
 | Campo | Valor |
 |---|---|
-| Sprint | Sprint 2 — Hardening, evidências e publicação |
-| Escopo | Landing page estática e regressão da modularização CSS |
-| Cenários executados | 15 |
-| Passou | 15 |
+| Sprint | Sprint 3 — Sincronização documental e manutenção |
+| Escopo | Landing page, modularização CSS e correção de overflow horizontal |
+| Cenários executados | 23 |
+| Passou | 23 |
 | Falhou | 0 |
 | Bloqueado | 0 |
 | Status geral | Aprovado para deploy |
@@ -59,6 +59,31 @@ Cenário: Manter a experiência quando movimento é reduzido
   Dado que o visitante prefere movimento reduzido
   Quando a página é exibida
   Então o conteúdo deve permanecer visível sem depender de animações
+```
+
+## Regressão do overflow horizontal — 2026-07-15
+
+| Verificação | Resultado |
+|---|---|
+| Viewports 320, 390, 768, 1024 e 1440 px | Passou — `scrollX` permaneceu 0 |
+| Simulação de scrollbar tradicional com 17 px | Passou — deslocamento horizontal bloqueado |
+| Rolagem vertical e header sticky | Passou — rolagem ativa e header em `top: 0` |
+| Menu mobile e tecla `Escape` | Passou — comportamento e foco preservados |
+| Console e rede | Passou — 0 erros, 0 avisos e nenhum asset com falha |
+| Inspeção visual mobile | Passou — sem barra ou corte de conteúdo essencial |
+| Lighthouse local | 99 performance, 100 acessibilidade, 100 boas práticas e 100 SEO |
+
+- LCP local: 1.966 ms.
+- TBT: 0 ms.
+- CLS: 0.
+
+```gherkin
+Cenário: Impedir deslocamento horizontal em viewport com barra vertical
+  Dado que o navegador reserva espaço para a barra de rolagem vertical
+  E a página contém elementos full-bleed baseados em 100vw
+  Quando o visitante tenta deslocar a página no eixo horizontal
+  Então a posição horizontal deve permanecer em zero
+  E a rolagem vertical deve continuar funcional
 ```
 
 ## Critérios de aceite validados
