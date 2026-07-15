@@ -40,4 +40,4 @@ Hero → sinais de atuação → sobre → especialidades → cases → ferramen
 
 - Validar a narrativa com recrutadores reais.
 - Adicionar métricas aos cases somente quando forem publicáveis e verificáveis.
-- Avaliar hospedagem local da fonte para reduzir dependência externa.
+- Fonte Maven Pro hospedada localmente e confirmada na implementação.

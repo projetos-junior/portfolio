@@ -9,9 +9,9 @@
 |---|---|
 | Nome | Sprint 3 — Sincronização documental e manutenção |
 | Objetivo | Alinhar a documentação ao estado publicado e preparar, sem executar, uma possível modularização do frontend |
-| Status | Em andamento |
+| Status | Concluída |
 | Início | 2026-07-15 |
-| Fim previsto | 2026-07-17 |
+| Encerramento | 2026-07-15 |
 | Responsável | ORION |
 
 ## Escopo autorizado — Fase A
@@ -36,24 +36,24 @@ FORGE → VALE → SHIELD
 
 ## Critérios de sucesso
 
-- [ ] PRD, DESIGN, spec, QA e andamento descrevem o mesmo estado do produto.
-- [ ] Nenhuma informação factual ou métrica é adicionada sem evidência.
-- [ ] Nenhum código de frontend é alterado durante a Fase A.
-- [ ] A decisão sobre modularização fica registrada como aprovada ou adiada.
-- [ ] Se a Fase B for aprovada, FORGE, VALE e SHIELD concluem suas etapas em sequência.
-- [ ] Git termina limpo, com commits semânticos e focados por camada.
+- [x] PRD, DESIGN, spec, QA e andamento descrevem o mesmo estado do produto.
+- [x] Nenhuma informação factual ou métrica é adicionada sem evidência.
+- [x] Nenhum código de frontend foi alterado durante a Fase A.
+- [x] A modularização foi aprovada exclusivamente para CSS.
+- [x] FORGE, VALE e SHIELD concluíram suas etapas em sequência.
+- [x] Git termina limpo, com commits semânticos e focados por camada.
 
 ## Tasks
 
 | ID | Fase | Task | Agente | Camada | Status |
 |---|---|---|---|---|---|
-| T16 | A | Sincronizar critérios de aceite do PRD com o QA aprovado | VERA | Documentação | Pendente |
-| T17 | A | Atualizar estado do design system e referências superadas | LUMI | Documentação | Pendente |
-| T18 | A | Corrigir a spec técnica conforme a implementação `as built` | FORGE | Documentação | Pendente |
-| T19 | A | Revisar consistência final e registrar decisão de manutenção | ORION | Documentação | Pendente |
-| T20 | B | Especificar e implementar modularização do CSS | FORGE | Frontend | Em andamento — autorizada em 2026-07-15 |
-| T21 | B | Executar regressão completa da modularização | VALE | QA | Bloqueada por T20 |
-| T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Bloqueada por T21 |
+| T16 | A | Sincronizar critérios de aceite do PRD com o QA aprovado | VERA | Documentação | Concluída |
+| T17 | A | Atualizar estado do design system e referências superadas | LUMI | Documentação | Concluída |
+| T18 | A | Corrigir a spec técnica conforme a implementação `as built` | FORGE | Documentação | Concluída |
+| T19 | A | Revisar consistência final e registrar decisão de manutenção | ORION | Documentação | Concluída |
+| T20 | B | Especificar e implementar modularização do CSS | FORGE | Frontend | Concluída |
+| T21 | B | Executar regressão completa da modularização | VALE | QA | Concluída |
+| T22 | B | Executar revisão de segurança do frontend | SHIELD | Segurança | Concluída |
 
 ## Riscos e respostas
 

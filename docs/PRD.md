@@ -3,7 +3,7 @@
 > **Quem preenche:** VERA (Planner)
 > **Quando:** Após briefing preenchido, antes de qualquer design ou desenvolvimento
 > **Atualizado por:** VERA, ORION (decisões relevantes), LUMI (decisões de design)
-> **Versão:** 1.6 | **Status:** MVP publicado
+> **Versão:** 1.7 | **Status:** MVP publicado e manutenção CSS validada
 
 ---
 
@@ -18,6 +18,7 @@
 | 1.4 | 2026-07-06 | Codex + VERA | Definição do e-mail final para contato no portfólio |
 | 1.5 | 2026-07-06 | Codex + VERA | Definição do CTA principal para abertura direta no WhatsApp |
 | 1.6 | 2026-07-10 | VERA + usuário | Decisão de publicar os cases sem métricas numéricas |
+| 1.7 | 2026-07-15 | VERA + ORION | Sincronização dos critérios de aceite com o QA aprovado e registro da modularização CSS |
 
 ---
 
@@ -245,26 +246,26 @@ Futuro
 ## 12. Critérios de Aceite
 
 ### F01 — Hero principal
-- [ ] Dado o primeiro acesso, quando a home carregar, então o visitante deve identificar nome, cargo e proposta de valor sem rolagem inicial.
-- [ ] Dado o uso em mobile, quando o hero for exibido, então foto, texto e CTA devem permanecer legíveis e sem sobreposição.
+- [x] Dado o primeiro acesso, quando a home carregar, então o visitante deve identificar nome, cargo e proposta de valor sem rolagem inicial.
+- [x] Dado o uso em mobile, quando o hero for exibido, então foto, texto e CTA devem permanecer legíveis e sem sobreposição.
 
 ### F02 — Sobre mim
-- [ ] Dado o acesso à seção, quando o visitante ler o bloco, então ele deve entender trajetória, foco de atuação e estilo de trabalho.
+- [x] Dado o acesso à seção, quando o visitante ler o bloco, então ele deve entender trajetória, foco de atuação e estilo de trabalho.
 
 ### F03 — Especialidades QA
-- [ ] Dado o acesso à seção, quando o visitante visualizar os cards, então deve reconhecer rapidamente as principais frentes de atuação em QA.
-- [ ] Dado o conteúdo confirmado do currículo, quando a seção for exibida, então deve contemplar ao menos testes manuais, APIs, rastreabilidade e atuação em bots/URA.
+- [x] Dado o acesso à seção, quando o visitante visualizar os cards, então deve reconhecer rapidamente as principais frentes de atuação em QA.
+- [x] Dado o conteúdo confirmado do currículo, quando a seção for exibida, então deve contemplar ao menos testes manuais, APIs, rastreabilidade e atuação em bots/URA.
 
 ### F04 — Projetos/cases
 - [x] Dado o acesso aos projetos, quando o visitante abrir ou ler cada item, então deve entender contexto, contribuição e impacto.
 - [x] Dado o currículo atual, quando os primeiros cases forem montados, então eles devem partir de experiências reais na Intervalor/GRB (Mutant) e contextos compatíveis com o histórico profissional.
 
 ### F06 — Contato
-- [ ] Dado o interesse do visitante, quando ele acionar um CTA, então deve conseguir iniciar contato sem fluxo intermediário confuso.
+- [x] Dado o interesse do visitante, quando ele acionar um CTA, então deve conseguir iniciar contato sem fluxo intermediário confuso.
 
 ### F07 — Responsividade e acessibilidade
-- [ ] Dado o uso por teclado, quando o visitante navegar, então todos os elementos interativos devem possuir foco visível.
-- [ ] Dado o uso em telas menores, quando houver rolagem, então não deve existir corte de conteúdo essencial.
+- [x] Dado o uso por teclado, quando o visitante navegar, então todos os elementos interativos devem possuir foco visível.
+- [x] Dado o uso em telas menores, quando houver rolagem, então não deve existir corte de conteúdo essencial.
 
 ---
 
@@ -289,6 +290,7 @@ Futuro
 | 2026-07-06 | O MVP do frontend será implementado com HTML5 semântico, CSS3 moderno e JavaScript ES6+ | Manter simplicidade, controle e baixo acoplamento tecnológico | VERA |
 | 2026-07-06 | O currículo enviado passa a ser a base factual inicial do conteúdo do portfólio | Reduz suposições e aumenta consistência | VERA |
 | 2026-07-10 | Os cases do MVP não usarão métricas numéricas | Não existem números publicáveis validados; a narrativa usará evidências qualitativas reais | VERA + usuário |
+| 2026-07-15 | O CSS será modularizado por responsabilidade sem dividir o HTML ou adicionar processo de build | Reduzir arquivos extensos preservando a simplicidade do monólito estático | ORION + usuário |
 
 ---
 

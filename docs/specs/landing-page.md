@@ -2,7 +2,7 @@
 
 > **Agente:** FORGE  
 > **Versão:** 1.1
-> **Status:** Modularização CSS aprovada para implementação
+> **Status:** Implementada e validada por VALE e SHIELD
 > **Requisitos:** F01 a F09 do `docs/PRD.md`
 
 ## Contexto
@@ -56,7 +56,8 @@ frontend/
 A divisão preservará a ordem original das regras para evitar mudanças de cascata
 ou especificidade. O HTML continuará sendo um documento único e não será criado
 processo de build, framework, dependência ou carregamento de conteúdo via
-JavaScript. `sections.css` será removido após a migração integral das regras.
+JavaScript. O antigo arquivo agregado de seções foi removido após a migração
+integral das regras para os módulos documentados acima.
 
 ## Módulos funcionais
 
@@ -134,6 +135,8 @@ Falhas em serviços externos não devem impedir a leitura do conteúdo principal
 - [x] Lighthouse possui baseline e resultado após correções.
 - [x] Auditoria de segurança possui score e decisão de release.
 - [x] A versão publicada corresponde ao commit aprovado.
+- [x] O CSS está dividido por responsabilidade, sem alterar a ordem das regras.
+- [x] A regressão da modularização foi aprovada em desktop e mobile.
 
 ## Verificação local
 

@@ -3,7 +3,7 @@
 > **Quem preenche:** LUMI (UX/UI) com suporte de CANVAS (canvas-design-system.md)
 > **Quando:** Antes de qualquer implementação de frontend
 > **Consumido por:** FORGE (implementação), VALE (validação)
-> **Versão:** 1.1 | **Status:** Direção visual definida e primeira implementação iniciada
+> **Versão:** 1.2 | **Status:** Implementado e validado em desktop e mobile
 
 ---
 
@@ -64,7 +64,6 @@ Um layout dark-first com presença editorial, recortes geométricos assimétrico
 |-------|---------|-------|--------|
 | Heading | Maven Pro | 600, 700, 800 | WOFF2 hospedado localmente |
 | Body | Maven Pro | 400, 500, 600 | WOFF2 hospedado localmente |
-| Mono | JetBrains Mono | 400, 500 | Google Fonts |
 
 ### Escala Tipográfica
 | Token | Tamanho | Line-height | Uso |
@@ -283,7 +282,7 @@ Cada item deve conter:
 - headline forte com seu nome e proposta de valor
 - parágrafo curto explicando como você ajuda times a entregar software com qualidade
 - dois CTAs: contato principal e ver projetos
-- foto profissional em destaque, preferencialmente `foto2.png` para o hero por enquadramento mais natural de meio corpo
+- foto profissional em destaque, usando `foto2.webp` para o hero por enquadramento mais natural de meio corpo
 - moldura de retrato assimétrica com notas flutuantes "Atual" e "Foco"
 
 ### 2. Sobre
@@ -291,7 +290,7 @@ Cada item deve conter:
 - mini resumo profissional
 - diferenciais de trabalho: visão analítica, documentação, colaboração com dev e produto, prevenção de falhas
 - pequenos indicadores de confiança como anos de experiência, número de projetos ou frentes atendidas, se disponíveis
-- foto secundária `foto1.png` em painel lateral com blocos de contexto
+- foto secundária `foto1.webp` em painel lateral com blocos de contexto
 
 ### 3. Especialidades
 - grid de 4 cards com variação de altura e largura

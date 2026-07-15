@@ -77,8 +77,11 @@ http://localhost:4173
 
 - `frontend/index.html`: estrutura principal da landing page
 - `frontend/assets/styles/tokens.css`: tokens visuais do design system
-- `frontend/assets/styles/base.css`: estilos globais e componentes base
-- `frontend/assets/styles/sections.css`: estilos por seção
+- `frontend/assets/styles/base.css`: fonte, reset e fundações globais
+- `frontend/assets/styles/navigation.css`: cabeçalho e navegação
+- `frontend/assets/styles/components.css`: botões, links e componentes compartilhados
+- `frontend/assets/styles/motion.css`: reveal, movimento reduzido e menu responsivo
+- `frontend/assets/styles/*.css`: módulos de hero, sobre, especialidades, cases, ferramentas, contato e responsividade
 - `frontend/assets/js/main.js`: menu mobile, links ativos e animações de reveal
 
 ## `Documentação de apoio`

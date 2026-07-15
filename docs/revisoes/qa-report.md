@@ -1,21 +1,21 @@
 # Relatório de QA — Landing page
 
 > **Produzido por:** VALE
-> **Versão:** 1.0
-> **Status:** Aprovado em produção
-> **Data:** 2026-07-10
+> **Versão:** 1.1
+> **Status:** Modularização CSS aprovada para deploy
+> **Data:** 2026-07-15
 
 ## Sumário executivo
 
 | Campo | Valor |
 |---|---|
 | Sprint | Sprint 2 — Hardening, evidências e publicação |
-| Escopo | Landing page estática, desktop e mobile |
-| Cenários executados | 9 |
-| Passou | 9 |
+| Escopo | Landing page estática e regressão da modularização CSS |
+| Cenários executados | 15 |
+| Passou | 15 |
 | Falhou | 0 |
 | Bloqueado | 0 |
-| Status geral | Aprovado em produção |
+| Status geral | Aprovado para deploy |
 
 O baseline encontrou LCP de 22,5 segundos, imagens com 3,84 MiB, ausência de
 favicon e divergência entre texto visível e nome acessível da marca. Após as
@@ -23,6 +23,43 @@ correções, o Lighthouse local registrou performance 98, acessibilidade 100,
 boas práticas 100 e SEO 100. O LCP caiu para 2,52 segundos em uma execução
 móvel simulada. A fonte foi hospedada localmente para remover a última cadeia
 externa bloqueante. A medição final em produção confirmou a meta do PRD.
+
+## Regressão da modularização CSS — 2026-07-15
+
+| Verificação | Resultado |
+|---|---|
+| Paridade das regras antes e depois da divisão | Passou — conteúdo CSS preservado |
+| Desktop 1440 × 1000 | Passou — hero e navegação sem regressão visual |
+| Mobile 390 × 844 | Passou — conteúdo legível e sem corte essencial |
+| Menu mobile e tecla `Escape` | Passou — fecha e devolve foco ao botão |
+| Console e rede | Passou — 0 erros, 0 avisos e todos os assets CSS com 200/304 |
+| Lighthouse local | 99 performance, 100 acessibilidade, 100 boas práticas e 100 SEO |
+
+- LCP local: 1.969 ms.
+- TBT: 0 ms.
+- CLS: 0.
+- Treze folhas CSS carregadas na mesma origem, sem dependências novas.
+
+### Cenários Gherkin incrementais
+
+```gherkin
+Cenário: Carregar os módulos CSS no fluxo principal
+  Dado que o visitante acessa a landing page
+  Quando o navegador carrega os estilos da mesma origem
+  Então todas as folhas CSS devem responder sem erro
+  E a página deve preservar hierarquia, conteúdo e layout
+
+Cenário: Navegar pelo menu em viewport móvel
+  Dado que a página está em 390 por 844 pixels
+  Quando o visitante abre o menu e pressiona Escape
+  Então o menu deve fechar
+  E o foco deve retornar ao botão Menu
+
+Cenário: Manter a experiência quando movimento é reduzido
+  Dado que o visitante prefere movimento reduzido
+  Quando a página é exibida
+  Então o conteúdo deve permanecer visível sem depender de animações
+```
 
 ## Critérios de aceite validados
 
@@ -72,5 +109,5 @@ externa bloqueante. A medição final em produção confirmou a meta do PRD.
 
 ## Decisão final
 
-**Aprovado em produção.** HTTP, headers, console, assets e correspondência com
-o commit foram validados em 2026-07-10.
+**Aprovado para deploy.** A produção anterior permanece aprovada; a versão com
+CSS modularizado requer publicação e smoke test para nova confirmação em produção.

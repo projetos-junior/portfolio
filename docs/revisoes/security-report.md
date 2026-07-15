@@ -1,18 +1,18 @@
 # Relatório de segurança — Frontend estático
 
-> **Produzido por:** SENTINEL
-> **Versão:** 1.0
-> **Status:** Aprovado em produção
-> **Data:** 2026-07-10
+> **Produzido por:** SENTINEL + SHIELD
+> **Versão:** 1.1
+> **Status:** SHIELD aprovou a modularização CSS para deploy
+> **Data:** 2026-07-15
 
 ## Identificação
 
 | Campo | Valor |
 |---|---|
-| Tipo | Frontend e pre-deploy audit |
-| Escopo | HTML, CSS, JavaScript, assets, histórico Git e Vercel |
+| Tipo | Frontend audit e revisão incremental SHIELD |
+| Escopo | HTML, CSS modularizado, JavaScript, assets, histórico Git e Vercel |
 | Security Score | 95/100 |
-| Decisão | Liberado para produção |
+| Decisão | Liberado para deploy; requer smoke test de produção |
 
 ## Sumário executivo
 
@@ -24,6 +24,18 @@ O ambiente publicado já usa HTTPS e HSTS. A auditoria encontrou ausência dos
 demais headers defensivos na versão anterior. `vercel.json` agora
 define CSP, proteção contra framing, `nosniff`, política de referrer e política
 de permissões. Esses headers foram confirmados na resposta de produção.
+
+## Revisão incremental SHIELD — 2026-07-15
+
+- A alteração reorganiza somente CSS e referências `<link>` da mesma origem.
+- A CSP existente mantém `style-src 'self'` e não exige ampliação de permissão.
+- Nenhum `@import`, URL externa, estilo inline ou dependência foi introduzido.
+- Nenhum segredo, sink de DOM XSS ou mecanismo de armazenamento foi encontrado.
+- Os seis links com `target="_blank"` mantêm `rel="noreferrer"`.
+- Todas as treze folhas CSS responderam sem erro no teste local.
+
+**Resultado incremental:** aprovado sem novo achado. O Security Score permanece
+95/100; a confirmação de headers da nova release deve ocorrer após o deploy.
 
 ## Score por categoria
 
@@ -73,5 +85,5 @@ de permissões. Esses headers foram confirmados na resposta de produção.
 
 ## Decisão final
 
-**Produção aprovada.** Os headers configurados estão presentes na resposta da
-URL oficial e não existem vulnerabilidades críticas ou altas abertas.
+**Deploy aprovado.** Não existem vulnerabilidades críticas ou altas abertas.
+A produção atual permanece segura; a nova release exige smoke test dos headers.
